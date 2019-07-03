@@ -1,5 +1,6 @@
 * {
-  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva,
+    Verdana, sans-serif;
 }
 
 body {
@@ -10,15 +11,21 @@ body {
 header {
   padding: 2%;
 }
-header nav .botaoHeader{
+header nav .botaoHeader {
   color: rgb(255, 162, 0);
   border-color: rgb(255, 162, 0);
- 
 }
 
-h1 {
+h1 a {
   text-align: center;
   color: rgb(255, 162, 0);
+  text-decoration: none;
+}
+
+h1 a:hover {
+  text-align: center;
+  color: rgb(255, 162, 0);
+  text-decoration: none;
 }
 
 #menu {
@@ -108,7 +115,7 @@ h1 {
   margin: 0 0 0 5px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -122,8 +129,8 @@ h1 {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -134,8 +141,8 @@ h1 {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -160,6 +167,17 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+#player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 300px;
+  padding: 10px;
+  margin-right: 20px;
+  margin-bottom: 10%;
+  /* margin: 50px; */
+}
 
 .footer {
   position: relative;
