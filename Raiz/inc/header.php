@@ -1,5 +1,8 @@
 <nav class="navbar navbar-dark bg-dark">
-    <h1><a href="index.php">Videomate</a></h1>
+    <div class="logo">
+        <a href="index.php"><img src="./images/Logo-Videomate.png" alt="Logo Videomate" height=50 width=50></img></a>
+        <h1><a href="index.php">videomate</a></h1>
+    </div>
     <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Pesquisa..." aria-label="pesquisa">
         <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Pesquisa</button>
