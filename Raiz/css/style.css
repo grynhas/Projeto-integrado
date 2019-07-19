@@ -25,17 +25,18 @@ header nav .botaoHeader {
   border-color: rgb(255, 162, 0);
 }
 
-h1 a {
+header .title {
   text-align: center;
-  color: rgb(255, 162, 0);
+  color: #ffc107;
+  font-size: 1em;
   text-decoration: none;
 }
 
-h1 a:hover {
+/* h1 a:hover {
   text-align: center;
   color: rgb(255, 162, 0);
   text-decoration: none;
-}
+} */
 
 #menu {
   background-color: transparent;
