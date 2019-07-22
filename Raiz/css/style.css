@@ -21,9 +21,14 @@ header {
 }
 
 header nav .botaoHeader {
-  color: rgb(255, 162, 0);
+  color: #ffa200;
   border-color: rgb(255, 162, 0);
 }
+.btn-outline-success:hover{
+  color: #454545;
+  border-color: rgb(255, 162, 0);
+}
+
 
 header .title {
   text-align: center;
