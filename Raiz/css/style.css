@@ -37,12 +37,21 @@ header .title {
   text-decoration: none;
 }
 
-/* h1 a:hover {
+.fa-facebook-f:before, .fa-facebook:before {
+    content: "\f09a";
+    color: rgb(255, 162, 0);
+}
+/*a {
+    color: #ffa200;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
   text-align: center;
   color: rgb(255, 162, 0);
   text-decoration: none;
 } */
-
+*/
 #menu {
   background-color: transparent;
 }
