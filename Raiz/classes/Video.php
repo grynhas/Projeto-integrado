@@ -2,6 +2,7 @@
 class Video
 {
     public $id;
+    public $idYoutube;
     public $titulo;
     public $descricao;
     public $tags = array();

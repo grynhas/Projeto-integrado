@@ -1,7 +1,8 @@
 {
   "videos": [
     {
-      "id": "M7lc1UVf-VE",
+      "id": "1",
+      "idYoutube": "M7lc1UVf-VE",
       "titulo": "Vídeo de teste",
       "descricao": "Este é apenas um vídeo para teste da plataforma.",
       "tags": ["teste", "ignorar"],
@@ -13,17 +14,17 @@
       "fimSegundo": "6"
     },
     {
-        "id": "M7lc1UVf-VE",
-        "titulo": "Vídeo de teste 2",
-        "descricao": "Este também é apenas um vídeo para teste da plataforma.",
-        "tags": ["teste", "ignorar"],
-        "inicioHora": "0",
-        "inicioMinuto": "2",
-        "inicioSegundo": "25",
-        "fimHora": "0",
-        "fimMinuto": "2",
-        "fimSegundo": "30"
-      }
-  
+      "id": "2",
+      "idYoutube": "M7lc1UVf-VE",
+      "titulo": "Vídeo de teste 2",
+      "descricao": "Este também é apenas um vídeo para teste da plataforma.",
+      "tags": ["teste", "ignorar"],
+      "inicioHora": "0",
+      "inicioMinuto": "2",
+      "inicioSegundo": "25",
+      "fimHora": "0",
+      "fimMinuto": "2",
+      "fimSegundo": "30"
+    }
   ]
 }

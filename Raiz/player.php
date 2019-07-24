@@ -4,17 +4,18 @@ require_once("carregarVideos.php");
 $videoPlay = new Video();
 $videoPlay->id = "indefinido";
 
-if (isset($_GET["videoid"])) {
-    $videoid = $_GET["videoid"];
+if (isset($_GET["videoId"])) {
+    $videoId = $_GET["videoId"];
 
     foreach ($videos as $key => $value) :
-        if ($value->id = $videoid) {
+        if ($value->id === $videoId) {
             $videoPlay = $value;
+            break;
         }
     endforeach;
 }
 
-$urlPlay = "http://www.youtube.com/embed/" . $videoPlay->id .
+$urlPlay = "http://www.youtube.com/embed/" . $videoPlay->idYoutube .
     "?autoplay=1&origin=http://videomate.com.br&modestbranding=1&rel=0&hl=pt&loop=0&showinfo=1" .
     "&mute=0&start=" . $videoPlay->Inicio() . "&end=" . $videoPlay->Fim();
 ?>

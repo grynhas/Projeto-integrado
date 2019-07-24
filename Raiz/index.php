@@ -14,9 +14,9 @@
                     <?php foreach ($videos as $key => $value) : ?>
                         <div class="video">
                             <div class="thumbnail">
-                                <img src="https://img.youtube.com/vi/<?php echo $value->id; ?>/hqdefault.jpg" alt="">
+                                <img src="https://img.youtube.com/vi/<?php echo $value->idYoutube; ?>/hqdefault.jpg" alt="">
                                 <div class="overlay">
-                                    <a href="player.php?videoid=<?php echo $value->id; ?>" class="icon" title="User Profile">
+                                    <a href="player.php?videoId=<?php echo $value->id; ?>" class="icon" title="User Profile">
                                         <i class="fa fa-play-circle"></i>
                                     </a>
                                 </div>

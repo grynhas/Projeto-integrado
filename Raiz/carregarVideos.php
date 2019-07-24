@@ -15,6 +15,7 @@ if (count($videosJSON) > 0) {
     foreach ($videosJSON["videos"] as $key => $value) {
         $video = new Video();
         $video->id = $value["id"];
+        $video->idYoutube = $value["idYoutube"];
         $video->titulo = $value["titulo"];
         $video->descricao = $value["descricao"];
         $video->tags = $value["tags"];
