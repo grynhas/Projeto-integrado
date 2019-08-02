@@ -19,7 +19,7 @@
       <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Pesquisa</button>
     </form>
     <label class="switch">
-            <input type="checkbox" value="true"  id="checkbox">
+            <input type="checkbox" onclick="alternarFundo();"  id="checkbox">
             <span class="slider round"></span>
     </label>
   </div>
