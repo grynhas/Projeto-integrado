@@ -1,3 +1,9 @@
-function backMudaDeCor() {
-    document.body.style.background = 'rgba(134, 50, 11, 0.336)';
+var luz = document.getElementById("checkbox").value;
+ console.log(luz);
+if(luz == true){
+        document.body.style.background = '#f6f6f6'; 
+        console.log(luz);
+}else{
+        document.body.style.background = '#000';   
+        console.log("apagado") 
 }
