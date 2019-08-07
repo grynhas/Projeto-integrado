@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <a href="index.php" class="navbar-brand"><img src="./images/Logo-Videomate.png" alt="Logo Videomate" height=50 width=50></a>
-         <h2><a class="title" href="index.php">videomate</a></h2> 
+  <h2><a class="title" href="index.php">videomate</a></h2>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -19,8 +19,8 @@
       <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Pesquisa</button>
     </form>
     <label class="switch">
-            <input type="checkbox" onclick="alternarFundo();"  id="checkbox">
-            <span class="slider round"></span>
+      <input type="checkbox" onclick="alternarFundo();" id="checkbox">
+      <span class="slider round"></span>
     </label>
   </div>
 </nav>

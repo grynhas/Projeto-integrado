@@ -15,5 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="./css/style.css">
+
+    <script defer src="inc/js/javascript.js"></script>
 </head>
-<body>
+<body onload="carregarPagina()">
