@@ -5,9 +5,7 @@
 
 <body class="container-fluid">
     <section class="row topo">
-        <article class="">
             <?php require_once("inc/menu.php"); ?>
-        </article>
         <article class="page-center col-10">
             <div class="title">
                 <h1 class="col-10">Login</h1>
