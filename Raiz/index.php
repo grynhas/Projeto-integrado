@@ -1,10 +1,8 @@
-    <header>
         <?php
         require_once("carregarVideos.php");
         require_once("inc/head.php");
         require_once("inc/header.php");
         ?>
-    </header>
     <main>
         <div class="container-fluid">
             <div class="row">
@@ -77,11 +75,7 @@
         </div>
         </div>
     </main>
-
-    <footer class="footer">
-        <?php require_once("inc/footer.php"); ?>
-    </footer>
-
+        <?php require_once("inc/footer.php"); ?>    
     </body>
 
     </html>

@@ -3,7 +3,6 @@
   require_once("inc/header.php");
 ?>
 
-<body >
 <div class="container-fluid">
     <section class="row">
         <?php require_once("inc/menu.php"); ?>
@@ -45,3 +44,4 @@
 </div>
   <?php require_once("inc/footer.php"); ?>
 </body>
+</html>

@@ -13,6 +13,9 @@ body {
 header {
   padding: 2%;
 }
+nav.bordaend {
+  margin: 0 0 20px 0;
+}
 
 .logo {
   display: flex;
@@ -218,10 +221,10 @@ input:checked + .slider:before {
   /* margin: 50px; */
 }
 
-.footer {
-  position: relative;
-  height: 5vh;
-  margin: 2vw;
+footer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 0 0 0;
   border-radius: 2px;
 }
 

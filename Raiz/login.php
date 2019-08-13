@@ -3,7 +3,8 @@
   require_once("inc/header.php");
 ?>
 
-<body class="container-fluid">
+
+<div class="container-fluid">
     <section class="row topo">
             <?php require_once("inc/menu.php"); ?>
         <article class="page-center col-10">
@@ -27,6 +28,7 @@
             </form>
         </article>
     </section>
-    </article>
+</div>
     <?php require_once("inc/footer.php"); ?>
 </body>
+</html>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark bordaend">
   <a href="index.php" class="navbar-brand"><img src="./images/Logo-Videomate.png" alt="Logo Videomate" height=50 width=50></a>
   <h2><a class="title" href="index.php">videomate</a></h2>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
