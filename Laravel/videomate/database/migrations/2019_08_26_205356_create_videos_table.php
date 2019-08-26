@@ -16,7 +16,7 @@ class CreateVideosTable extends Migration
         Schema::create('videos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('id_usuario');
-            $table->bigInteger('id_youtube');
+            $table->string('id_youtube', 1000);
             $table->string('titulo', 50);
             $table->string('descricao', 1000);
             $table->string('tags', 1000);
