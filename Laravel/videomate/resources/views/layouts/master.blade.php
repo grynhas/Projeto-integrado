@@ -30,7 +30,7 @@
 
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a href="/" class="navbar-brand"><img src="./images/Logo-Videomate.png" alt="Logo Videomate"
+            <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
                     height=50 width=50></a>
             <h2><a class="title" href="/">videomate</a></h2>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"

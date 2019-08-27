@@ -16,7 +16,7 @@
                     </li>
                 </ol>
                 <div class="carousel-item active">
-                    <img src="images/imagem5.jpeg" class="img-fluid" alt="">
+                    <img src="../images/imagem5.jpeg" class="img-fluid" alt="">
                     <div class="carousel-caption">
                         <h3>Como funciona</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet repellendus, necessitatibus,
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/imagem4.jpeg" class="img-fluid" alt="">
+                    <img src="../images/imagem4.jpeg" class="img-fluid" alt="">
                     <div class="carousel-caption">
                         <h3>Como funciona</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam accusamus sed ad adipisci
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/imagem3.jpeg" class="img-fluid" alt="">
+                    <img src="../images/imagem3.jpeg" class="img-fluid" alt="">
                     <div class="carousel-caption">
                         <h3>Como funciona</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic vel sequi explicabo recusandae
