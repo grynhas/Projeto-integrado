@@ -14,7 +14,7 @@ class AddNicknameToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('nickname', 50);
+            $table->string('nickname', 50)->unique();
         });
     }
 
