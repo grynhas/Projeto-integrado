@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div id="galeria" class="col-10 col-md-10">
+<div id="galeria" class="col-12 col-md-12">
     <!--carousel-->
     <div class="row m-auto">
         <section id="carousel-controles" class="carousel slide" data-ride="carousel">
@@ -16,7 +16,7 @@
                     </li>
                 </ol>
                 <div class="carousel-item active">
-                    <img src="images/imagem5.jpeg" class="img-fluid" alt="">
+                    <img src="../images/imagem5.jpeg" class="img-fluid" alt="">
                     <div class="carousel-caption">
                         <h3>Como funciona</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet repellendus, necessitatibus,

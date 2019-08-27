@@ -28,8 +28,7 @@
 
 <body onload="carregarPagina()">
 
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <header class="navbar navbar-expand-md navbar-dark bg-dark">
             <a href="/" class="navbar-brand"><img src="./images/Logo-Videomate.png" alt="Logo Videomate"
                     height=50 width=50></a>
             <h2><a class="title" href="/">videomate</a></h2>
@@ -56,12 +55,11 @@
                     <span class="slider round"></span>
                 </label>
             </div>
-        </nav>
 
     </header>
 
     <main>
-        <div class="container-fluid">
+{{--         <div class="container-fluid">
             <div class="row">
                 <section id="menu" class="col-2 col-md-2">
                     <div class="list-group" id="list-tab" role="tablist">
@@ -74,16 +72,15 @@
                         <a class="list-group-item list-group-item-action" href="index.php" id="list-home-list"
                             data-toggle="list" role="tab" aria-controls="home">Home</a>
                     </div>
-                </section>
+                </section> --}}
 
                 @yield('content')
 
             </div>
         </div>
     </main>
+        <div class="page-footer font-small bg-dark pt-2">
 
-    <footer class="footer">
-        <div class="page-footer font-small bg-dark pt-4 container-fluid">
             <div class="footer-title">
                 <h4>Nossas Redes</h4>
             </div>
@@ -114,7 +111,6 @@
                 <a class="text-warning" href="">videomate.com.br</a>
             </div>
         </div>
-    </footer>
 </body>
 
 </html>
