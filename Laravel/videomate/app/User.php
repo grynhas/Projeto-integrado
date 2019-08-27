@@ -16,8 +16,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'nickname'
     ];
+
+    public function video() {
+        return $this->hasMany(videos::class, 'id_usuario', 'id');
+    }
 
     /**
      * The attributes that should be hidden for arrays.
