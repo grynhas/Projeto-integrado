@@ -12,4 +12,20 @@ class VideoController extends Controller
 
         return view('index')->with('videos', $videos);
     }
+
+    public function cadastrandoVideos(Request $request){
+        echo "em construção";
+        exit;
+    }
+
+    public function buscandoVideos(){
+        echo "em construção";
+        exit;
+    }
+
+    public function reproduzindoVideos($id){
+        echo "em construção";
+        exit;
+    }
 }
+

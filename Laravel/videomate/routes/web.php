@@ -24,7 +24,7 @@ Route::get('/video/busca', 'VideoController@buscandoVideos');
 Route::get('video/player/{id}','VideoController@reproduzindoVideos');
 
 // Login Usuario
-Route::post('/usuario/login', 'UserController@logandoUsuário');
+Route::post('/usuario/login', 'UserController@logandoUsuario');
 
 //Cadastrar Usuario
 Route::post('/usuario/cadastro','UserController@cadastrandoUsuario');
