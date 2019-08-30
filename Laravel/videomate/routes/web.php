@@ -12,6 +12,7 @@
 */
 
 // Index
+Route::get('/', 'VideoController@listandoVideos');
 Route::get('/index', 'VideoController@listandoVideos');
 
 // Cadastrar Video
@@ -21,7 +22,7 @@ Route::post('/video/upload','VideoController@cadastrandoVideos');
 Route::get('/video/busca', 'VideoController@buscandoVideos');
 
 // Reproduzir de Vídeo
-Route::get('video/player/{id}','VideoController@reproduzindoVideos');
+Route::get('video/reproduzir/{id}','VideoController@reproduzir');
 
 // Login Usuario
 Route::post('/usuario/login', 'UserController@logandoUsuario');

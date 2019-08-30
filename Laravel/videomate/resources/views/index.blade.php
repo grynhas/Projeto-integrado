@@ -3,7 +3,7 @@
 @section('content')
 
 <div id="galeria" class="col-12 col-md-12">
-    <!--carousel-->
+    <!--carousel
     <div class="row m-auto">
         <section id="carousel-controles" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -43,7 +43,6 @@
                     </div>
                 </div>
             </div>
-            <!--controle-->
             <a href="#carousel-controles" class="carousel-control-prev" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </a>
@@ -52,25 +51,23 @@
             </a>
 
         </section>
-    </div>
+    </div> -->
     <div class="row">
-        <?php foreach ($videos as $key => $value) : ?>
+        @foreach ($videos as $video)
         <div class="video">
             <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/<?php echo $value->idYoutube; ?>/hqdefault.jpg" alt="">
+                <img src="https://img.youtube.com/vi/{{ $video->id_youtube }}/hqdefault.jpg" alt="">
                 <div class="overlay">
-                    <a href="player.php?videoId=<?php echo $value->id; ?>" class="icon" title="User Profile">
+                    <a href="video/reproduzir/{{ $video->id }}" class="icon" title="User Profile">
                         <i class="fa fa-play-circle"></i>
                     </a>
                 </div>
             </div>
-            <strong><?php echo $value->titulo; ?></strong>
-            <p><?php echo $value->descricao; ?></p>
+            <strong>{{ $video->titulo }}</strong>
+            <p>{{ $video->descricao }}</p>
         </div>
-        <?php endforeach; ?>
+        @endforeach
     </div>
-</div>
-
 </div>
 
 @endsection
