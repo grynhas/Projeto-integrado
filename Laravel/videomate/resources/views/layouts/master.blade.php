@@ -28,8 +28,7 @@
 
 <body onload="carregarPagina()">
 
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <header class="navbar navbar-expand-md navbar-dark bg-dark">
             <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
                     height=50 width=50></a>
             <h2><a class="title" href="/">videomate</a></h2>
