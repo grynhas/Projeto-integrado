@@ -22,11 +22,11 @@
     margin-right: 10px;
   }
   
-  header nav .botaoHeader {
+  header .botaoHeader {
     color: #ffa200;
     border-color: rgb(255, 162, 0);
   }
-  .btn-outline-success:hover{
+  header  .btn-outline-success:hover{
     color: #454545;
     border-color: rgb(255, 162, 0);
   }

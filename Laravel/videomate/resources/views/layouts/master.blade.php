@@ -28,8 +28,19 @@
 
 <body onload="carregarPagina()">
 
+<<<<<<< HEAD
+    <header class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
+                    height=50 width=50></a>
+            <h2><a class="title" href="/">videomate</a></h2>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+=======
     <header>
         <div class="container col-12">
+>>>>>>> 98eeee923148636abf467f26e5f44db607b5ad29
 
             <nav class="navbar navbar-expand-md navbar-dark bg-dark rounded">
                 <a href="/" class="navbar-brand"><img src="{{ url('images/Logo-Videomate.png') }}" alt="Logo Videomate"
