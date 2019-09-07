@@ -19,6 +19,20 @@ class Video extends Model
         return $this->hasOne(User::class, 'id', 'id_usuario');
     }
 
+    //----------------------------  INICIO -----------------------------// 
+    //VERIFICAR NECESSIDADE DE INSERIR O RELACIONAMENTO                 //
+    // public function playlist()
+    // {
+    //     return $this->hasOne(playlist::class, 'id', 'id_playlist');
+    // }
+
+    // public function tag()
+    // {
+    //     return $this->hasMany(tag::class, 'id', 'id_tag'); 
+    // }
+    //----------------------------  FIM  ------------------------------//
+    
+
     // public $id;
     // public $id_usuario;
     // public $id_youtube;
