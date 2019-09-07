@@ -27,36 +27,70 @@
 </head>
 
 <body onload="carregarPagina()">
-
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <header class="navbar navbar-dark bg-dark">
             <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
-                    height=50 width=50></a>
-            <h2><a class="title" href="/">videomate</a></h2>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                height=50 width=50></a>
+                <h3><a class="title" href="/">videomate</a></h3>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            @guest
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a href="/index" class="nav-link pr-2">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
+                        <a href="/login" class="nav-link pr-2">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/register" class="nav-link pr-2">Cadastro</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
-                    <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Pesquisa</button>
-                </form>
-                <label class="switch">
-                    <input type="checkbox" onclick="alternarFundo();" id="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
+            @else
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a href="/index" class="nav-link pr-2">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/video/playlist" class="nav-link pr-2">Playlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/video/criarPlaylist" class="nav-link pr-2">Criar Playlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/generos/adicionar" class="nav-link pr-2">Cadastrar Gêneros</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav flex-row ml-auto">
+                    <li class="nav-item">
+                        <a href="" class="nav-link pr-4">
+                            Olá {{ Auth::user()->name }}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('logout') }}" class="nav-link"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                            {{ __('Sair') }}
+                        </a>
 
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
+                </ul>
+            @endguest
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
+                <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Pesquisa</button>
+            </form>
+            <label class="switch">
+                <input type="checkbox" onclick="alternarFundo();" id="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
     </header>
 
     <main>

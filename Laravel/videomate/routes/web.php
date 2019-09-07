@@ -29,3 +29,7 @@ Route::post('/usuario/login', 'UserController@logandoUsuário');
 //Cadastrar Usuario
 Route::post('/usuario/cadastro','UserController@cadastrandoUsuario');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
