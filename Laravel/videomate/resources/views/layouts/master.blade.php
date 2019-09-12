@@ -27,9 +27,9 @@
 </head>
 
 <body onload="carregarPagina()">
-    <header class="navbar navbar-expand-md navbar-dark bg-dark rounded">
+    <header class="navbar navbar-expand-md navbar-dark bg-dark rounded" height=10vh width=100vw>
             <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
-                height=50 width=50></a>
+                height=30px width=30px></a>
                 <h3><a class="title" href="/">videomate</a></h3>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +84,7 @@
             @endguest
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
-                <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Pesquisa</button>
+                <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Buscar</button>
             </form>
             <label class="switch">
                 <input type="checkbox" onclick="alternarFundo();" id="checkbox">
