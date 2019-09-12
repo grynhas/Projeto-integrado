@@ -27,7 +27,13 @@
 </head>
 
 <body onload="carregarPagina()">
+<<<<<<< HEAD
     <header class="navbar navbar-expand-md navbar-dark bg-dark rounded">
+=======
+
+<<<<<<< HEAD
+    <header class="navbar navbar-expand-md navbar-dark bg-dark">
+>>>>>>> master
             <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
                 height=50 width=50></a>
                 <h3><a class="title" href="/">videomate</a></h3>
@@ -35,6 +41,7 @@
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+<<<<<<< HEAD
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             @guest
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -90,12 +97,48 @@
                 <input type="checkbox" onclick="alternarFundo();" id="checkbox">
                 <span class="slider round"></span>
             </label>
+=======
+=======
+    <header>
+        <div class="container col-12">
+>>>>>>> 98eeee923148636abf467f26e5f44db607b5ad29
+
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark rounded">
+                <a href="/" class="navbar-brand"><img src="{{ url('images/Logo-Videomate.png') }}" alt="Logo Videomate"
+                        height=50 width=50></a>
+                <h2><a class="title mr-5" href="/">videomate</a></h2>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
+                        <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Pesquisa</button>
+                    </form>
+                    <label class="switch">
+                        <input type="checkbox" onclick="alternarFundo();" id="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </nav>
+>>>>>>> master
         </div>
     </header>
 
     <main>
-{{--         <div class="container-fluid">
+        <div class="container">
             <div class="row">
+                {{-- 
                 <section id="menu" class="col-2 col-md-2">
                     <div class="list-group" id="list-tab" role="tablist">
                         <a class="list-group-item list-group-item-action" href="perfil.php" id="list-profile-list"
@@ -114,38 +157,38 @@
             </div>
         </div>
     </main>
-        <div class="page-footer font-small bg-dark pt-2">
-
-            <div class="footer-title">
-                <h4>Nossas Redes</h4>
-            </div>
-            <div class="social">
-                <ul class="social-list row">
-                    <li class="social-list-item col-sm-4 col-md-3 col-lg-2">
-                        <a class="fb-ic social-list-item-icon social-list-item-icon-facebook" href="">
-                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
-                        </a>
-                    </li>
-                    <li class="social-list-item col-sm-4 col-md-3 col-lg-2">
-                        <a class="tw-ic social-list-item-icon social-list-item-icon-twitter" href="">
-                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                    </li>
-                    <li class="social-list-item col-sm-4 col-md-3 col-lg-2">
-                        <a class="ins-ic social-list-item-icon social-list-item-icon-instagram" href="">
-                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                    </li>
-                    <!-- futuramente GitHub
+    <div class="container d-flex justify-content-center col-11 page-footer font-small bg-dark pt-3 mt-3 rounded">
+        <div class="footer-title">
+            <h4>Nossas Redes</h4>
+        </div>
+        <div class="social">
+            <ul class="social-list row">
+                <li class="social-list-item col-sm-4 col-md-3 col-lg-2">
+                    <a class="fb-ic social-list-item-icon social-list-item-icon-facebook" href="">
+                        <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                    </a>
+                </li>
+                <li class="social-list-item col-sm-4 col-md-3 col-lg-2">
+                    <a class="tw-ic social-list-item-icon social-list-item-icon-twitter" href="">
+                        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                </li>
+                <li class="social-list-item col-sm-4 col-md-3 col-lg-2">
+                    <a class="ins-ic social-list-item-icon social-list-item-icon-instagram" href="">
+                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                </li>
+                <li>
+                    <div class="footer-copyright text-center">© 2019
+                        <a class="text-warning" href="">videomate.com.br</a>
+                    </div>
+                </li>
+                <!-- futuramente GitHub
                     <li class="social-list-item social-list-item-icon-github"></li>
                      -->
-                </ul>
-            </div>
-            <!-- copyright -->
-            <div class="footer-copyright text-center py-3">© 2019 Copyright:
-                <a class="text-warning" href="">videomate.com.br</a>
-            </div>
+            </ul>
         </div>
+    </div>
 </body>
 
 </html>
