@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div id="player" class="col-7 col-md-7 embed-responsive embed-responsive-16by9">
+<div id="player" class="col-7 embed-responsive embed-responsive-16by9">
     <iframe id="ytplayer" type="text/html" class="embed-responsive-item" src="{{ $video->urlPlay() }}"
         frameborder="0" allow="autoplay; fullscreen"></iframe>
 </div>
