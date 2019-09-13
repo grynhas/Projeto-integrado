@@ -27,17 +27,7 @@
 </head>
 
 <body onload="carregarPagina()">
-<<<<<<< HEAD
     <header class="navbar navbar-expand-md navbar-dark bg-dark rounded" height=10vh width=100vw>
-=======
-<<<<<<< HEAD
-    <header class="navbar navbar-expand-md navbar-dark bg-dark rounded">
-=======
-
-<<<<<<< HEAD
-    <header class="navbar navbar-expand-md navbar-dark bg-dark">
->>>>>>> master
->>>>>>> 9e9a49b756dff2e4fa6508ba441a2defa6595fe8
             <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
                 height=30px width=30px></a>
                 <h3><a class="title" href="/">videomate</a></h3>
@@ -45,7 +35,6 @@
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-<<<<<<< HEAD
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             @guest
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -101,41 +90,6 @@
                 <input type="checkbox" onclick="alternarFundo();" id="checkbox">
                 <span class="slider round"></span>
             </label>
-=======
-=======
-    <header>
-        <div class="container col-12">
->>>>>>> 98eeee923148636abf467f26e5f44db607b5ad29
-
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark rounded">
-                <a href="/" class="navbar-brand"><img src="{{ url('images/Logo-Videomate.png') }}" alt="Logo Videomate"
-                        height=50 width=50></a>
-                <h2><a class="title mr-5" href="/">videomate</a></h2>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
-                        <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Pesquisa</button>
-                    </form>
-                    <label class="switch">
-                        <input type="checkbox" onclick="alternarFundo();" id="checkbox">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </nav>
->>>>>>> master
         </div>
     </header>
 
@@ -185,12 +139,14 @@
                 <li>
                     <div class="footer-copyright text-center">© 2019
                         <a class="text-warning" href="">videomate.com.br</a>
-                    </div>
-                </li>
-                <!-- futuramente GitHub
-                    <li class="social-list-item social-list-item-icon-github"></li>
-                     -->
-            </ul>
+                    </div>          
+                </nav>
+            </nav>
+        </nav>
+<li class="social-list-item social-list-item-icon-github"></li>
+                             </nav>
+                        </ul>
+                    </nav>
         </div>
     </div>
 </body>
