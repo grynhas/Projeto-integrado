@@ -15,8 +15,9 @@ class CreatePlaylistsTable extends Migration
     {
         Schema::create('playlists', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_usuario');
+            $table->bigInteger('id_video');
             $table->string('nome', 50);
+            $table->string('categoria', 20);
             $table->timestamps();
         });
     }
