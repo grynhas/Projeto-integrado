@@ -3,7 +3,6 @@
 @section('content')
 
 <div id="galeria" class="col-12 col-md-12">
-carousel
     <div class="row m-auto">
         <section id="carousel-controles" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -49,7 +48,6 @@ carousel
             <a href="#carousel-controles" class="carousel-control-next" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
-
         </section>
     </div> 
     <div class="row">
