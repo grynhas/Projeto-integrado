@@ -6,12 +6,15 @@
   
   body {
     /* background: #d4d9dd; */
-    background-image: url("../images/dark-honeycomb.png");
+    background-color: #313131;
+    height: 80vh;
+    /* background-image: url("../images/dark-honeycomb.png"); */
   }
   
   /* HEADER */
   header {
     padding: 2%;
+    margin-bottom: 1em;
   }
   
   .logo {
@@ -35,6 +38,10 @@
     color: #ffc107;
     font-size: 1em;
     text-decoration: none;
+  }
+
+  span .slider.round {
+    background-color: rgb(255, 162, 0);
   }
   
   .fa-facebook-f:before, .fa-facebook:before {

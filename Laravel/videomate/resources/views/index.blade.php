@@ -3,7 +3,6 @@
 @section('content')
 
 <div id="galeria" class="col-12 col-md-12">
-carousel
     <div class="row m-auto">
         <section id="carousel-controles" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -49,25 +48,45 @@ carousel
             <a href="#carousel-controles" class="carousel-control-next" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
-
         </section>
-    </div> 
-    <div class="row">
-        @foreach ($videos as $video)
-        <div class="video">
-            <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/{{ $video->id_youtube }}/hqdefault.jpg" alt="">
-                <div class="overlay">
-                    <a href="video/reproduzir/{{ $video->id }}" class="icon" title="User Profile">
-                        <i class="fa fa-play-circle"></i>
-                    </a>
-                </div>
+        {{-- <section>
+        <div class="container d-flex justify-content-center col-11 page-footer font-small bg-dark pt-3 mt-3 rounded">
+            <div class="favorites">
+                <div class="row">
+                    @foreach ($videos as $video)
+                    <div class="video">
+                        <div class="thumbnail">
+                            <img src="https://img.youtube.com/vi/{{ $video->id_youtube }}/hqdefault.jpg" alt="">
+                            <div class="overlay">
+                                <a href="video/reproduzir/{{ $video->id }}" class="icon" title="User Profile">
+                                    <i class="fa fa-play-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <strong>{{ $video->titulo }}</strong>
+                        <p>{{ $video->descricao }}</p>
+                    </div>
+                    @endforeach
+                </div>    
             </div>
-            <strong>{{ $video->titulo }}</strong>
-            <p>{{ $video->descricao }}</p>
+        </section>     --}}
+        <div class="row">
+            @foreach ($videos as $video)
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="https://img.youtube.com/vi/{{ $video->id_youtube }}/hqdefault.jpg" alt="">
+                    <div class="overlay">
+                        <a href="video/reproduzir/{{ $video->id }}" class="icon" title="User Profile">
+                            <i class="fa fa-play-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                <strong>{{ $video->titulo }}</strong>
+                <p>{{ $video->descricao }}</p>
+            </div>
+            @endforeach
         </div>
-        @endforeach
-    </div>
+    </div> 
 </div>
 
 @endsection
