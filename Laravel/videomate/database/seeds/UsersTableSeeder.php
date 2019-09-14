@@ -12,11 +12,13 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::updateOrCreate([
+        User::create([
             'name' => 'Administrador',
             'email' => 'admin@videomate.com',
-            'nickname' => 'admin',
+            'nickname' => 'adm',
             'password' => bcrypt('123456')
         ]);
+
+        factory(User::class, 8)->create();
     }
 }

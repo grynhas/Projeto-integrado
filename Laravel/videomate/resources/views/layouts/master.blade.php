@@ -39,9 +39,6 @@
             @guest
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a href="/index" class="nav-link pr-2">Inicio</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="/login" class="nav-link pr-2">Login</a>
                     </li>
                     <li class="nav-item">
@@ -50,9 +47,6 @@
                 </ul>
             @else
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a href="/index" class="nav-link pr-2">Inicio</a>
-                    </li>
                     <li class="nav-item">
                         <a href="/video/playlist" class="nav-link pr-2">Playlist</a>
                     </li>
