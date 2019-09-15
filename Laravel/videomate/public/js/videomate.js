@@ -25,8 +25,7 @@ function carregarPagina() {
       luz = "off"
       console.log("aceso")
     } else {
-      document.body.style.background = "#000000"
-      document.body.style.backgroundImage = 'url("./images/dark-honeycomb.png")'
+      document.body.style.background = "#000"
   
       for (i = 0; i < x.length; i++) {
         x[i].style.color = "white"

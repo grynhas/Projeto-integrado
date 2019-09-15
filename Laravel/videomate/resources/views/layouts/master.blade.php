@@ -50,11 +50,11 @@
                     <li class="nav-item">
                         <a href="/video/playlist" class="nav-link pr-2">Playlist</a>
                     </li>
-                    <li class="nav-item">
+{{--                     <li class="nav-item">
                         <a href="/video/criarPlaylist" class="nav-link pr-2">Criar Playlist</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
-                        <a href="/generos/adicionar" class="nav-link pr-2">Cadastrar Gêneros</a>
+                        <a href="/video/upload" class="nav-link pr-2">Novo video</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav flex-row ml-auto">
