@@ -25,7 +25,7 @@ function carregarPagina() {
       luz = "off"
       console.log("aceso")
     } else {
-      document.body.style.background = "#000"
+      document.body.style.background = "#313131"
   
       for (i = 0; i < x.length; i++) {
         x[i].style.color = "white"
