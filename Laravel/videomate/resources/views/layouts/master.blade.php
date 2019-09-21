@@ -109,10 +109,12 @@
             </div>
         </div>
     </main>
-    <div class="container d-flex justify-content-center col-11 page-footer font-small bg-dark pt-3 mt-3 rounded">
-        <div class="footer-title">
+
+
+    <div class=" social footer-title d-flex justify-content-center col-12 page-footer font-small bg-dark pt-3 mt-3 rounded">
+    <div class="footer-title">
             <h4>Nossas Redes</h4>
-        </div>
+        </div> 
         <div class="social">
             <ul class="social-list row">
                 <li class="social-list-item col-sm-4 col-md-3 col-lg-2">
@@ -134,14 +136,9 @@
                     <div class="footer-copyright text-center">© 2019
                         <a class="text-warning" href="">videomate.com.br</a>
                     </div>          
-                </nav>
-            </nav>
-        </nav>
-<li class="social-list-item social-list-item-icon-github"></li>
-                             </nav>
-                        </ul>
-                    </nav>
-        </div>
+                </li>    
+                <li class="social-list-item social-list-item-icon-github"></li>
+            </ul>
     </div>
 </body>
 

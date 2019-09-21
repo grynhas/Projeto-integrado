@@ -225,11 +225,10 @@
     /* margin: 50px; */
   }
   
-  .footer {
-    position: relative;
-    height: 5vh;
-    margin: 2vw;
-    border-radius: 2px;
+.footer {
+      position:absolute;
+      bottom: 0;
+      width:100%;
   }
   
   .page-footer .footer-title {

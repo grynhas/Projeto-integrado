@@ -13,9 +13,13 @@ class VideoController extends Controller
         return view('index')->with('videos', $videos);
     }
 
-    public function cadastrandoVideos(Request $request)
+    public function cadastroDeVideos(Request $request){
+        return view('cadastroDeVideos');
+    }
+
+     public function salvandoVideo(Request $request)
     {
-        $request->Validate([
+        $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'id_youtube' => ['requiered','string','max:1000'],
             'titulo' => ['requiered', 'string', 'max:50'],
@@ -28,7 +32,8 @@ class VideoController extends Controller
             'fim_minuto' => ['requiered','integer'],
             'fim_segundo' => ['requiered','integer'],
         ]);
-    }
+        
+    } 
 
     public function buscandoVideos()
     {

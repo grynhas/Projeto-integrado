@@ -16,13 +16,15 @@ Route::get('/', 'VideoController@listandoVideos');
 Route::get('/index', 'VideoController@listandoVideos');
 
 // Cadastrar Video
-Route::post('/video/upload','VideoController@cadastrandoVideos');
+Route::get('/video/upload','VideoController@cadastroDeVideos');
+
+Route::post('/video/upload','VideoController@salvandoVideo');
 
 // Buscar vídeo
 Route::get('/video/busca', 'VideoController@buscandoVideos');
 
 // Reproduzir de Vídeo
-Route::get('video/reproduzir/{id}','VideoController@reproduzir');
+Route::post('video/reproduzir/{id}','VideoController@reproduzir');
 
 // Login Usuario
 Route::post('/usuario/login', 'UserController@logandoUsuario');
