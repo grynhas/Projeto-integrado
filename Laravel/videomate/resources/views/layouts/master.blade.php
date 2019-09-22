@@ -50,16 +50,13 @@
                     <li class="nav-item">
                         <a href="/video/playlist" class="nav-link pr-2">Playlist</a>
                     </li>
-{{--                     <li class="nav-item">
-                        <a href="/video/criarPlaylist" class="nav-link pr-2">Criar Playlist</a>
-                    </li> --}}
                     <li class="nav-item">
-                        <a href="/video/upload" class="nav-link pr-2">Novo video</a>
-                    </li>
+                        <a href="/video/criarPlaylist" class="nav-link pr-2">Criar Playlist</a>
+                    </li> 
                 </ul>
                 <ul class="navbar-nav flex-row ml-auto">
                     <li class="nav-item">
-                        <a href="" class="nav-link pr-4">
+                    <a href="{{'/perfil'}}" class="nav-link pr-4">
                             Olá {{ Auth::user()->name }}
                         </a>
                     </li>
@@ -75,6 +72,7 @@
                         </form>
                     </li>
                 </ul>
+
             @endguest
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
@@ -141,5 +139,6 @@
             </ul>
     </div>
 </body>
+
 
 </html>

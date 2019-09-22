@@ -1,10 +1,10 @@
-{{-- @extends('layouts.master')
+@extends('layouts.master')
 
-@section('content') --}}
+@section('content')
 
 <h1>Cadastro de Filmes</h1>
 
-{{-- <form method="POST" action="/video/upload" enctype="multipart/form-data">
+<form method="POST" action="/video/upload" enctype="multipart/form-data">
     @csrf
     {{ method_field('POST') }}
 
@@ -42,5 +42,5 @@
     <div class="form-group col-md-2">
         <button type="submit" class="form-control btn btn-primary">Enviar</button>
     </div>
-</form> --}}
-{{-- @endsection --}}
+</form>
+@endsection

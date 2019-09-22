@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function logandoUsuario(Request $request){
-        echo "em construção";
-        exit;
+    public function exibirPerfil(){
+        return view('perfil');
     }
 
     public function cadastrandoUsuario(Request $request){

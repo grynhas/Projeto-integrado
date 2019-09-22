@@ -13,8 +13,8 @@ class VideoController extends Controller
         return view('index')->with('videos', $videos);
     }
 
-    public function cadastroDeVideos(Request $request){
-        return view('cadastroDeVideos');
+    public function cadastroDeVideos(){
+        return view('upload');
     }
 
      public function salvandoVideo(Request $request)
@@ -35,9 +35,10 @@ class VideoController extends Controller
         
     } 
 
-    public function buscandoVideos()
+    public function buscandoVideos($tag, $tutilo)
     {
-        echo "em construção";
+        $video = Video::find($tag, $tutilo);
+
         exit;
     }
 
@@ -45,5 +46,10 @@ class VideoController extends Controller
     {
         $video = Video::find($id);
         return view('reproduzir')->with('video', $video);
+    }
+    public function deleteVideo($id){
+        $video = Video::find($id);
+        $video->delete();
+        return redirect('index');
     }
 }

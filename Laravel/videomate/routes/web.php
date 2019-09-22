@@ -15,6 +15,8 @@
 Route::get('/', 'VideoController@listandoVideos');
 Route::get('/index', 'VideoController@listandoVideos');
 
+//perfil
+Route::get('/perfil', 'UserController@exibirPerfil');
 // Cadastrar Video
 Route::get('/video/upload','VideoController@cadastroDeVideos');
 
