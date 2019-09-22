@@ -13,15 +13,32 @@ class VideoController extends Controller
         return view('index')->with('videos', $videos);
     }
 
-    public function cadastrandoVideos(Request $request)
-    {
-        echo "em construção";
-        exit;
+    public function cadastroDeVideos(){
+        return view('upload');
     }
 
-    public function buscandoVideos()
+     public function salvandoVideo(Request $request)
     {
-        echo "em construção";
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'id_youtube' => ['requiered','string','max:1000'],
+            'titulo' => ['requiered', 'string', 'max:50'],
+            'descricao' => ['requiered', 'string', 'max:1000'],
+            'tags' => ['requiered', 'string'], 'max:1000',
+            'inicio_hora' => ['requiered','integer'],
+            'inicio_minuto' => ['requiered','integer'],
+            'inicio_segundo' => ['requiered','integer'],
+            'fim_hora' => ['requiered','integer'],
+            'fim_minuto' => ['requiered','integer'],
+            'fim_segundo' => ['requiered','integer'],
+        ]);
+        
+    } 
+
+    public function buscandoVideos($tag, $tutilo)
+    {
+        $video = Video::find($tag, $tutilo);
+
         exit;
     }
 
@@ -29,5 +46,10 @@ class VideoController extends Controller
     {
         $video = Video::find($id);
         return view('reproduzir')->with('video', $video);
+    }
+    public function deleteVideo($id){
+        $video = Video::find($id);
+        $video->delete();
+        return redirect('index');
     }
 }
