@@ -44,6 +44,27 @@
                     <li class="nav-item">
                         <a href="/register" class="nav-link pr-2">Cadastro</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
+                        {{-- Modal Upload Video --}}
+                        <div class="modal fade" id="modalUploadVideoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                        <h4 class="modal-title w-100 font-weight-bold">Impossível fazer Upload</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body mx-3">
+                                        <div class="md-text mb-5">
+                                            <p>Você precisa estar logado para adicionar um vídeo</p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                            <button class="btn btn-unique">Fazer Login<i class="fas fa-paper-plane-o ml-1"></i></button>
+                                    </div>
+                    </li>        
                 </ul>
             @else
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -54,7 +75,48 @@
                         <a href="/video/criarPlaylist" class="nav-link pr-2">Criar Playlist</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/generos/adicionar" class="nav-link pr-2">Cadastrar Gêneros</a>
+                            <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
+                            {{-- Modal Upload Video --}}
+                            <div class="modal fade" id="modalUploadVideoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header text-center">
+                                            <h4 class="modal-title w-100 font-weight-bold">Adicione um vídeo</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body mx-3">
+                                            <div class="md-form mb-5">
+                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <input type="text" id="form34" class="form-control validate">
+                                            <label data-error="wrong" data-success="right" for="form34">Link do vídeo</label>
+                                            </div>
+                
+                                            <div class="md-form mb-5">
+                                            <i class="fas fa-envelope prefix grey-text"></i>
+                                            <input type="email" id="form29" class="form-control validate">
+                                            <label data-error="wrong" data-success="right" for="form29">Minuto inicial</label>
+                                            </div>
+                
+                                            <div class="md-form mb-5">
+                                            <i class="fas fa-tag prefix grey-text"></i>
+                                            <input type="text" id="form32" class="form-control validate">
+                                            <label data-error="wrong" data-success="right" for="form32">Minuto Final</label>
+                                            </div>
+                
+                                            <div class="md-form">
+                                            <i class="fas fa-pencil prefix grey-text"></i>
+                                            <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                                            <label data-error="wrong" data-success="right" for="form8">Descrição</label>
+                                            </div>
+                                        </div>
+                                            <div class="modal-footer d-flex justify-content-center">
+                                                <button class="btn btn-unique">Upload<i class="fas fa-paper-plane-o ml-1"></i></button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
                     </li>
                 </ul>
                 <ul class="navbar-nav flex-row ml-auto">
@@ -144,5 +206,4 @@
         </div>
     </div>
 </body>
-
 </html>
