@@ -22,6 +22,9 @@ Route::get('/video/upload','VideoController@cadastroDeVideos');
 
 Route::post('/video/upload','VideoController@salvandoVideo');
 
+//Meus videos (atualização 22.09.19)
+Route::get('/video/meusvideos/{id}','VideoController@listandoMeusVideos');
+
 // Buscar vídeo
 Route::get('/video/busca', 'VideoController@buscandoVideos');
 

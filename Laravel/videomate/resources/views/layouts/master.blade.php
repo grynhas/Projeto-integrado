@@ -69,10 +69,7 @@
             @else
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a href="/video/playlist" class="nav-link pr-2">Playlist</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/video/criarPlaylist" class="nav-link pr-2">Criar Playlist</a>
+                        <a href="/video/meusvideos/{{ Auth::user()->id }}" class="nav-link pr-2">Meus Vídeos</a>
                     </li>
                     <li class="nav-item">
                             <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
