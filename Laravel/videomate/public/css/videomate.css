@@ -13,8 +13,17 @@
   
   /* HEADER */
   header {
+    /* margin-bottom: 1em; */
+    border-bottom: 1px solid #FFA200;
+  }
+
+  /* SEGUNDA BARRA */
+  .bottom-nav {
+    border-radius: 0px 0px 5px 5px;
     padding: 2%;
+    height: 3vh;
     margin-bottom: 1em;
+    background-color:  #726f6f;
   }
   
   .logo {

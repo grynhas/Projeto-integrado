@@ -27,7 +27,7 @@
 </head>
 
 <body onload="carregarPagina()">
-    <header class="navbar navbar-expand-md navbar-dark bg-dark rounded" height=10vh width=100vw>
+    <header class="navbar navbar-expand-md navbar-dark bg-dark" height=10vh width=100vw>
             <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
                 height=30px width=30px></a>
                 <h3><a class="title" href="/">videomate</a></h3>
@@ -145,7 +145,16 @@
                 <span class="slider round"></span>
             </label>
         </div>
-    </header>
+</header>
+        <section class="bottom-nav container-fluid navbar navbar-expand-md ">
+            <li class="row">
+                <ul class="col-3">1</ul>
+                <ul class="col-3">2</ul>
+                <ul class="col-3">3</ul>
+                <ul class="col-3">4</ul>
+            </li>
+        </section>
+
 
     <main>
         <div class="container">

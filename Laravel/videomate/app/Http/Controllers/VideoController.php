@@ -38,7 +38,8 @@ class VideoController extends Controller
     //Atulização 22.09
     public function listandoMeusVideos($id_usuario)
     {
-        $videos = Video::find($id_usuario);
+        $videos = Video::find($id_usuario)->get();
+        //$videos = Video::all( );
         return view('myvideos')->with('videos', $videos);
     }
 

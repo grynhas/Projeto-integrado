@@ -15,7 +15,7 @@ class CreateVideosTable extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_usuario');
+            $table->unsignedBigInteger('id_usuario');
             $table->string('id_youtube', 1000);
             $table->string('titulo', 50);
             $table->string('descricao', 1000);
@@ -38,5 +38,6 @@ class CreateVideosTable extends Migration
     public function down()
     {
         Schema::dropIfExists('videos');
+        
     }
 }

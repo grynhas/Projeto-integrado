@@ -17,7 +17,7 @@ class VideosTableSeeder extends Seeder
             'id_youtube' => 'M7lc1UVf-VE',
             'titulo' => 'Vídeo de teste',
             'descricao' => 'Este é apenas um vídeo para teste da plataforma.',
-            'tags' => 'teste,ignorar',
+            'tags' => 'teste',
             'inicio_hora' => '0',
             'inicio_minuto' => '6',
             'inicio_segundo' => '25',
