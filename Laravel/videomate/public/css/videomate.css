@@ -10,6 +10,9 @@
     height: 80vh;
     /* background-image: url("../images/dark-honeycomb.png"); */
   }
+  main {
+    height: 100vh;
+  }
   
   /* HEADER */
   header {
@@ -19,11 +22,11 @@
 
   /* SEGUNDA BARRA */
   .bottom-nav {
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 1px 1px;
     padding: 2%;
     height: 3vh;
     margin-bottom: 1em;
-    background-color:  #726f6f;
+    border-bottom: 1px solid #FFA200;
   }
   
   .logo {
@@ -38,7 +41,7 @@
     color: #ffa200;
     border-color: rgb(255, 162, 0);
   }
-  header  .btn-outline-success:hover{
+  header  .botaoHeader:hover {
     color: #454545;
     border-color: rgb(255, 162, 0);
   }

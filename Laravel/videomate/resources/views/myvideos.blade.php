@@ -10,35 +10,38 @@
             </header>
         </section>
     @else
+    <div class="container">
         <section class="row">
             <header class="col-12">
                 <h1 class="col-12 text-center">videos</h1>
                 <p class="col-12 d-block text-center"><b>Todos os vídeos</b></p>
             </header>
         </section>
+
         <section class="row">
             <article class="col-12">
-                <table class="table">
-                    <thead class="thead-light">
+                <table class="table table-striped table-dark">
+                    <thead>
                         <tr>
                             <th scope="col">Título</th>
                             <th scope="col">Descrição</th>
-                            <th scope="col" colspan="2">Ações</th>
+                            <th scope="col-md-1">Alterar</th>
+                            <th scope="col-md-1">Deletar</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                         @foreach($videos as $video)
                         <tr>
                             {{-- <td scope="row">
                                 <img src="{{$videos->imagem}}" width="80" height="80"alt="">
-                            </td> --}}
-                            <td>{{$video->id}}</td>
+                            </td> 
+                            <td>{{$video->id}}</td> --}}
                             <td>{{$video->titulo}}</td>
                             <td>{{$video->descricao}}</td>
                             <td>
                                 <a href="/videos/alterar/{{$video->id}}">
                                     <i class="fas fa-edit"></i>
-                                </a>
+                                </a> 
                             </td>
                             <td>
                                 <a href="#" data-toggle="modal" data-target="#modal{{$video->id}}">
@@ -78,5 +81,6 @@
                 </div> --}}
             </article>
         </section>
+    </div>
     @endif
 @endsection

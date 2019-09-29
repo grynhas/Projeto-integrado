@@ -17,21 +17,40 @@ class VideoController extends Controller
         return view('upload');
     }
 
-     public function salvandoVideo(Request $request)
-    {
+     public function salvandoVideo(Request $request )
+    { 
+        /* dd($request);
+        exit; */
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'id_youtube' => ['requiered','string','max:1000'],
-            'titulo' => ['requiered', 'string', 'max:50'],
-            'descricao' => ['requiered', 'string', 'max:1000'],
-            'tags' => ['requiered', 'string'], 'max:1000',
-            'inicio_hora' => ['requiered','integer'],
-            'inicio_minuto' => ['requiered','integer'],
-            'inicio_segundo' => ['requiered','integer'],
-            'fim_hora' => ['requiered','integer'],
-            'fim_minuto' => ['requiered','integer'],
-            'fim_segundo' => ['requiered','integer'],
+            'id_youtube' => 'required|string|max:1000',
+            'titulo' => 'required|string|max:50',
+            'descricao' => 'required|string|max:1000',
+            'tags' => 'required|string|max:1000',
+            'inicio_hora' => 'required|integer',
+            'inicio_minuto' => 'required|integer',
+            'inicio_segundo' => 'required|integer',
+            'fim_hora' => 'required|integer',
+            'fim_minuto' => 'required|integer',
+            'fim_segundo' => 'required|integer'
         ]);
+        $video = Video::create([
+            "id_usuario" => $request->input('id_usuario'),
+            "id_youtube" => $request->input('id_youtube'),
+            "titulo" => $request->input('titulo'),
+            "descricao" => $request->input('descricao'),
+            "tags" => $request->input('tags'),
+            "inicio_hora" => $request->input('inicio_hora'),
+            "inicio_minuto" => $request->input('inicio_minuto'),
+            "inicio_segundo" => $request->input('inicio_segundo'),
+            "fim_hora" => $request->input('fim_hora'),
+            "fim_minuto" => $request->input('fim_minuto'),
+            "fim_segundo" => $request->input('fim_segundo')
+
+        ]);
+
+        $video->save();
+
+        return redirect('/index');
         
     } 
 

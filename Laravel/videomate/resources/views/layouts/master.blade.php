@@ -46,26 +46,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
-                        {{-- Modal Upload Video --}}
-                        <div class="modal fade" id="modalUploadVideoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header text-center">
-                                        <h4 class="modal-title w-100 font-weight-bold">Impossível fazer Upload</h4>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body mx-3">
-                                        <div class="md-text mb-5">
-                                            <p>Você precisa estar logado para adicionar um vídeo</p>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer d-flex justify-content-center">
-                                            <button class="btn btn-unique">Fazer Login<i class="fas fa-paper-plane-o ml-1"></i></button>
-                                    </div>
                     </li>        
                 </ul>
+                
             @else
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
@@ -73,47 +56,6 @@
                     </li>
                     <li class="nav-item">
                             <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
-                            {{-- Modal Upload Video --}}
-                            <div class="modal fade" id="modalUploadVideoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header text-center">
-                                            <h4 class="modal-title w-100 font-weight-bold">Adicione um vídeo</h4>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body mx-3">
-                                            <div class="md-form mb-5">
-                                            <i class="fas fa-user prefix grey-text"></i>
-                                            <input type="text" id="form34" class="form-control validate">
-                                            <label data-error="wrong" data-success="right" for="form34">Link do vídeo</label>
-                                            </div>
-                
-                                            <div class="md-form mb-5">
-                                            <i class="fas fa-envelope prefix grey-text"></i>
-                                            <input type="email" id="form29" class="form-control validate">
-                                            <label data-error="wrong" data-success="right" for="form29">Minuto inicial</label>
-                                            </div>
-                
-                                            <div class="md-form mb-5">
-                                            <i class="fas fa-tag prefix grey-text"></i>
-                                            <input type="text" id="form32" class="form-control validate">
-                                            <label data-error="wrong" data-success="right" for="form32">Minuto Final</label>
-                                            </div>
-                
-                                            <div class="md-form">
-                                            <i class="fas fa-pencil prefix grey-text"></i>
-                                            <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
-                                            <label data-error="wrong" data-success="right" for="form8">Descrição</label>
-                                            </div>
-                                        </div>
-                                            <div class="modal-footer d-flex justify-content-center">
-                                                <button class="btn btn-unique">Upload<i class="fas fa-paper-plane-o ml-1"></i></button>
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
                     </li>
                 </ul>
                 <ul class="navbar-nav flex-row ml-auto">
@@ -134,6 +76,72 @@
                         </form>
                     </li>
                 </ul>
+                        
+        <div class="modal fade" id="modalUploadVideoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Adicione um vídeo</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        
+                    </div>
+                    <div class="modal-body mx-3">
+                        <form method="POST" action="/video/upload">
+                            @csrf
+                            @method('POST')
+                            <div class="md-form mb-5">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="text" id="id_youtube" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="id_youtube">Link do vídeo</label>
+                                <input type="hidden" value="Auth::user()->id" name="id_usuario">  
+                            </div>
+
+                            <div class="md-form mb-5">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="titulo" id="titulo" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="titulo">Titulo</label>
+                            </div>
+
+                            <div class="md-form mb-5">
+                                <i class="fas fa-hourglass-half"></i>
+                                <input class="col-2" type="number" id="inicio_hora" class="form-control validate">
+                                <input class="col-2" type="number" id="inicio_minuto" class="form-control validate">
+                                <input class="col-2"type="number" id="inicio_segundo" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="minutoinicial">HH:MM:SS</label>
+                            </div>
+
+                            <div class="md-form mb-5">
+                                    <i class="fas fa-hourglass-half"></i>
+                                    <input class="col-2" type="number" id="fim_hora" class="form-control validate">
+                                    <input class="col-2" type="number" id="fim_minuto" class="form-control validate">
+                                    <input class="col-2"type="number" id="fim_segundo" class="form-control validate">
+                                    <label data-error="wrong" data-success="right" for="minutoinicial">HH:MM:SS</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fas fa-pencil prefix grey-text"></i>
+                                <textarea type="text" id="descricao" class="md-textarea form-control" rows="4"></textarea>
+                                <label data-error="wrong" data-success="right" for="descricao">Descrição</label>
+                            </div>
+
+                            <div class="md-form">
+                                <i class="fas fa-pencil prefix grey-text"></i>
+                                <textarea type="text" id="tags" class="md-textarea form-control" rows="4"></textarea>
+                                <label data-error="wrong" data-success="right" for="tgs">Tags</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-unique">{{ __('Enviar') }}<i class="fas fa-paper-plane-o ml-1"></i></button>
+                        </form>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <small>Atenção: o vídeo deve ter no máximo 2 minutos.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
 
             @endguest
             <form class="form-inline my-2 my-lg-0">
@@ -146,12 +154,12 @@
             </label>
         </div>
 </header>
-        <section class="bottom-nav container-fluid navbar navbar-expand-md ">
+        <section class="bottom-nav container-fluid  navbar-expand-md navbar-dark bg-dark header2">
             <li class="row">
-                <ul class="col-3">1</ul>
-                <ul class="col-3">2</ul>
-                <ul class="col-3">3</ul>
-                <ul class="col-3">4</ul>
+                <ul class="col-3">exenplo1</ul>
+                <ul class="col-3">exenplo2</ul>
+                <ul class="col-3">exenplo3</ul>
+                <ul class="col-3">exenplo4</ul>
             </li>
         </section>
 
@@ -183,7 +191,7 @@
     <div class=" social footer-title d-flex justify-content-center col-12 page-footer font-small bg-dark pt-3 mt-3 rounded">
     <div class="footer-title">
             <h4>Nossas Redes</h4>
-        </div> 
+    </div> 
         <div class="social">
             <ul class="social-list row">
                 <li class="social-list-item col-sm-4 col-md-3 col-lg-2">
@@ -208,6 +216,6 @@
                 </li>    
                 <li class="social-list-item social-list-item-icon-github"></li>
             </ul>
-    </div>
+    </div>   
 </body>
 </html>

@@ -11,7 +11,7 @@ class Video extends Model
     protected $primaryKey = "id";
     protected $fillable = [
         'id_youtube', 'titulo', 'descricao', 'tags', 'inicio_hora', 'inicio_minuto',
-        'inicio_segundo', 'fim_hora', 'fim_munuto', 'fim_segundo'
+        'inicio_segundo', 'fim_hora', 'fim_minuto', 'fim_segundo'
     ];
 
     public function user()
