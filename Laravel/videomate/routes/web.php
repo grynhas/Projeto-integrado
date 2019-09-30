@@ -19,7 +19,6 @@ Route::get('/index', 'VideoController@listandoVideos');
 Route::get('/perfil', 'UserController@exibirPerfil');
 // Cadastrar Video
 Route::get('/video/upload','VideoController@cadastroDeVideos');
-
 Route::post('/video/upload','VideoController@salvandoVideo');
 
 //Meus videos (atualização 22.09.19)

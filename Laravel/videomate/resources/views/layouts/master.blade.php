@@ -44,7 +44,7 @@
                     <li class="nav-item">
                         <a href="/register" class="nav-link pr-2">Cadastro</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item center">
                         <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
                     </li>        
                 </ul>
@@ -54,7 +54,7 @@
                     <li class="nav-item">
                         <a href="/video/meusvideos/{{ Auth::user()->id }}" class="nav-link pr-2">Meus Vídeos</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item center">
                             <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
                     </li>
                 </ul>
@@ -188,7 +188,7 @@
     </main>
 
 
-    <div class=" social footer-title d-flex justify-content-center col-12 page-footer font-small bg-dark pt-3 mt-3 rounded">
+    <div class=" footer social footer-title d-flex justify-content-center col-12 page-footer font-small bg-dark pt-3 mt-3 rounded">
     <div class="footer-title">
             <h4>Nossas Redes</h4>
     </div> 

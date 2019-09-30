@@ -10,9 +10,7 @@
     height: 80vh;
     /* background-image: url("../images/dark-honeycomb.png"); */
   }
-  main {
-    height: 100vh;
-  }
+  
   
   /* HEADER */
   header {
@@ -79,7 +77,9 @@
   #menu {
     background-color: transparent;
   }
-  
+  .center {
+    align-self: center;
+  }
   #menu nav {
     background-color: transparent;
   }
@@ -238,10 +238,13 @@
   }
   
 .footer {
-      position:absolute;
-      bottom: 0;
-      width:100%;
+  position: relative;
+  bottom:0;
+  width:100%;
   }
+  .ajusteFooter {
+    height: 70vh;
+  }  
   
   .page-footer .footer-title {
     font-size: 0.8em;
