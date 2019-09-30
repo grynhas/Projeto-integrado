@@ -90,50 +90,51 @@
                     <div class="modal-body mx-3">
                         <form method="POST" action="/video/upload">
                             @csrf
-                            @method('POST')
+                            {{ method_field('POST') }}
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
                                 <input type="text" id="id_youtube" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="id_youtube">Link do vídeo</label>
-                                <input type="hidden" value="Auth::user()->id" name="id_usuario">  
+                                <input type="hidden" value={{Auth::user()->id}} name="id_usuario">  
                             </div>
 
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
-                                <input type="titulo" id="titulo" class="form-control validate">
+                                <input type="titulo" id="titulo" name="titulo" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="titulo">Titulo</label>
                             </div>
 
                             <div class="md-form mb-5">
                                 <i class="fas fa-hourglass-half"></i>
-                                <input class="col-2" type="number" id="inicio_hora" class="form-control validate">
-                                <input class="col-2" type="number" id="inicio_minuto" class="form-control validate">
-                                <input class="col-2"type="number" id="inicio_segundo" class="form-control validate">
+                                <input class="col-2" type="number" id="inicio_hora" name="inicio_hora"class="form-control validate">
+                                <input class="col-2" type="number" id="inicio_minuto" name="inicio_minuto" class="form-control validate">
+                                <input class="col-2"type="number" id="inicio_segundo" name="inicio_segundo" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="minutoinicial">HH:MM:SS</label>
                             </div>
 
                             <div class="md-form mb-5">
                                     <i class="fas fa-hourglass-half"></i>
-                                    <input class="col-2" type="number" id="fim_hora" class="form-control validate">
-                                    <input class="col-2" type="number" id="fim_minuto" class="form-control validate">
-                                    <input class="col-2"type="number" id="fim_segundo" class="form-control validate">
+                                    <input class="col-2" type="number" id="fim_hora" name="fim_hora" class="form-control validate">
+                                    <input class="col-2" type="number" id="fim_minuto" name="fim_minuto" class="form-control validate">
+                                    <input class="col-2"type="number" id="fim_segundo" name="fim_segundo" class="form-control validate">
                                     <label data-error="wrong" data-success="right" for="minutoinicial">HH:MM:SS</label>
                             </div>
 
                             <div class="md-form">
                                 <i class="fas fa-pencil prefix grey-text"></i>
-                                <textarea type="text" id="descricao" class="md-textarea form-control" rows="4"></textarea>
+                                <textarea type="text" id="descricao" name="descricao" class="md-textarea form-control" rows="4"></textarea>
                                 <label data-error="wrong" data-success="right" for="descricao">Descrição</label>
                             </div>
 
                             <div class="md-form">
                                 <i class="fas fa-pencil prefix grey-text"></i>
-                                <textarea type="text" id="tags" class="md-textarea form-control" rows="4"></textarea>
+                                <textarea type="text" id="tags"  name="tags" class="md-textarea form-control" rows="4"></textarea>
                                 <label data-error="wrong" data-success="right" for="tgs">Tags</label>
                             </div>
 
                             <button type="submit" class="btn btn-unique">{{ __('Enviar') }}<i class="fas fa-paper-plane-o ml-1"></i></button>
                         </form>
+                       
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
                         <small>Atenção: o vídeo deve ter no máximo 2 minutos.</small>
@@ -143,7 +144,7 @@
         </div>
  
 
-            @endguest
+        @endguest
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
                 <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Buscar</button>
@@ -156,10 +157,10 @@
 </header>
         <section class="bottom-nav container-fluid  navbar-expand-md navbar-dark bg-dark header2">
             <li class="row">
-                <ul class="col-3">exenplo1</ul>
-                <ul class="col-3">exenplo2</ul>
-                <ul class="col-3">exenplo3</ul>
-                <ul class="col-3">exenplo4</ul>
+                <ul class="col-3 center">exenplo1</ul>
+                <ul class="col-3 center">exenplo2</ul>
+                <ul class="col-3 center">exenplo3</ul>
+                <ul class="col-3 center">exenplo4</ul>
             </li>
         </section>
 

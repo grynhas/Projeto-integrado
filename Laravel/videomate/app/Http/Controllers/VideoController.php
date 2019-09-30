@@ -19,8 +19,8 @@ class VideoController extends Controller
 
      public function salvandoVideo(Request $request )
     { 
-        /* dd($request);
-        exit; */
+         /*  dd($request->input('id_usuario'));
+        exit;   */
         $request->validate([
             'id_youtube' => 'required|string|max:1000',
             'titulo' => 'required|string|max:50',
