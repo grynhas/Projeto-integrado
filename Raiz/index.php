@@ -29,14 +29,14 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="images/imagem4.jpeg" class="img-fluid" alt="">
+                                    <img src="images/imagem2.jpg" class="img-fluid" alt="">
                                     <div class="carousel-caption">
                                         <h3>Como funciona</h3>
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam accusamus sed ad adipisci maxime autem delectus libero, qui iure quo nemo consectetur obcaecati distinctio sint voluptatem voluptas quod commodi optio.</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="images/imagem3.jpeg" class="img-fluid" alt="">
+                                    <img src="images/imagem2.jpeg" class="img-fluid" alt="">
                                     <div class="carousel-caption">
                                         <h3>Como funciona</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic vel sequi explicabo recusandae nulla laudantium labore autem deserunt necessitatibus illo nobis optio, voluptatibus reprehenderit consectetur unde adipisci ipsa error fuga?</p>

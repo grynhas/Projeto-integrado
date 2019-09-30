@@ -14,8 +14,9 @@
                         </li>
                     </ol>
                     <div class="carousel-item active">
-                        <img src="../images/imagem5.jpeg" class="img-fluid" alt="">
+                        <img src="../images/imagem2.jpeg" class="img-fluid" alt="">
                         <div class="carousel-caption">
+                            <a href="#"><i class="fas fa-play text-white bg-danger rounded-circle p-3 mb-3"></i></a>
                             <h3>Como funciona</h3>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet repellendus, necessitatibus,
                                 debitis sint quae ratione, officiis quas eos est aperiam excepturi quia porro unde
@@ -23,8 +24,9 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="../images/imagem4.jpeg" class="img-fluid" alt="">
+                        <img src="../images/imagem2.jpeg" class="img-fluid" alt="">
                         <div class="carousel-caption">
+                            <a href="#"><i class="fas fa-play text-white bg-danger rounded-circle p-3 mb-3"></i></a>
                             <h3>Como funciona</h3>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam accusamus sed ad adipisci
                                 maxime autem delectus libero, qui iure quo nemo consectetur obcaecati distinctio sint
@@ -32,8 +34,9 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="../images/imagem3.jpeg" class="img-fluid" alt="">
+                        <img src="../images/imagem2.jpeg" class="img-fluid" alt="">
                         <div class="carousel-caption">
+                            <a href="#"><i class="fas fa-play text-white bg-danger rounded-circle p-3 mb-3"></i></a>
                             <h3>Como funciona</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic vel sequi explicabo recusandae
                                 nulla laudantium labore autem deserunt necessitatibus illo nobis optio, voluptatibus

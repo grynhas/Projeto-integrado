@@ -25,5 +25,7 @@ class VideosTableSeeder extends Seeder
             'fim_minuto' => '7',
             'fim_segundo' => '6'
         ]);
+
+        factory(Video::class, 12)->create();
     }
 }
