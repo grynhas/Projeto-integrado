@@ -155,18 +155,19 @@
             </label>
         </div>
 </header>
-        <section class="bottom-nav container-fluid  navbar-expand-md navbar-dark bg-dark header2">
+        <section class="botoes bottom-nav container-fluid  navbar-expand-md navbar-dark bg-dark header2">
             <li class="row">
-                <ul class="col-3 center">exenplo1</ul>
-                <ul class="col-3 center">exenplo2</ul>
-                <ul class="col-3 center">exenplo3</ul>
-                <ul class="col-3 center">exenplo4</ul>
+                <ul class="col-3">#primeira</ul>
+                <ul class="col-3">#segunda</ul>
+                <ul class="col-3">#terceira</ul>
+                <ul class="col-3">#quarta</ul>
+
             </li>
         </section>
 
 
     <main>
-        <div class="container">
+        <div class="logado container">
             <div class="row">
                 {{-- 
                 <section id="menu" class="col-2 col-md-2">
