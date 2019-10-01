@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>videomate</title>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -132,7 +133,7 @@
                                 <label data-error="wrong" data-success="right" for="tgs">Tags</label>
                             </div>
 
-                            <button type="submit" class="btn btn-unique">{{ __('Enviar') }}<i class="fas fa-paper-plane-o ml-1"></i></button>
+                            <button type="submit" class="btn btn-unique"> Enviar<i class="fas fa-paper-plane-o ml-1"></i></button>
                         </form>
                        
                     </div>

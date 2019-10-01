@@ -10,7 +10,7 @@ class Video extends Model
     protected $table = "videos";
     protected $primaryKey = "id";
     protected $fillable = [
-        'id_youtube', 'titulo', 'descricao', 'tags', 'inicio_hora', 'inicio_minuto',
+        'id_usuario','id_youtube', 'titulo', 'descricao', 'tags', 'inicio_hora', 'inicio_minuto',
         'inicio_segundo', 'fim_hora', 'fim_minuto', 'fim_segundo'
     ];
 
