@@ -267,7 +267,7 @@
 .card {
   padding-top: 20px;
   margin: 10px 0 20px 0;
-  background-color: rgba(214, 224, 226, 0.2);
+  background-color:#e5e5e5;
   border-top-width: 0;
   border-bottom-width: 2px;
   -webkit-border-radius: 3px;
@@ -308,6 +308,7 @@
 .card .card-heading.image .card-heading-header {
   display: inline-block;
   vertical-align: top;
+  
 }
 
 .card .card-heading.image .card-heading-header h3 {
@@ -325,6 +326,8 @@
 .card .card-body {
   padding: 0 20px;
   margin-top: 20px;
+  color: rgb(255, 162, 0);
+  background-color: #e5e5e5;
 }
 
 .card .card-media {
@@ -506,3 +509,30 @@
 }
 
 .btnn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
+
+.card-login{
+  color: black;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.card-cadastro{
+    color: black;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+
+
+}
+.botoes{
+
+padding: 0%;
+height:3vh;
+text-align: center;
+color:rgb(255, 162, 0);
+
+}
+.logado{
+  align-items: center;
+  height: 100vh;
+}
