@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Video;
 use SebastianBergmann\Environment\Console;
+use Symfony\Component\Console\Input\Input;
 
 class VideoController extends Controller
 {
@@ -15,8 +16,7 @@ class VideoController extends Controller
     }
 
     public function cadastroDeVideos(){
-        $videos = Video::all();
-        
+        $videos = Video::all(); 
         return view('/video/upload',compact('videos'));
     }
 
@@ -60,9 +60,9 @@ class VideoController extends Controller
     //Atulização 22.09
     public function listandoMeusVideos($id_usuario)
     {
-        $videos = Video::find($id_usuario)->get();
-        //$videos = Video::all( );
-        return view('myvideos')->with('videos', $videos);
+        $video = Video::find($id_usuario)->get($id_usuario);
+        //$videos = Video::all();
+        return view('myvideos')->with('videos', $video);
     }
 
 
