@@ -17,9 +17,9 @@
     </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="{{ url('css/app.css') }}" rel='stylesheet' type='text/css' />
+        <link href="{{ url('css/app.css') }}" rel='stylesheet' type='text/css' />
     <link href="{{ url('css/videomate.css') }}" rel='stylesheet' type='text/css' />
 
     <script defer src="{{ url('js/app.js') }}"></script>
@@ -27,16 +27,9 @@
 </head>
 
 <body onload="carregarPagina()">
-    <header class="navbar navbar-expand-md navbar-dark bg-dark" height=10vh width=100vw>
-            <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
-                height=30px width=30px></a>
-                <h3><a class="title" href="/">videomate</a></h3>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <header class="navbar navbar-expand-md navbar-dark bg-dark" height=10vh width=100vw>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            @guest
+                @guest
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a href="/login" class="nav-link pr-2">Login</a>
@@ -49,34 +42,52 @@
                     </li>        
                 </ul>
                 
-            @else
+                @else
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a href="/video/meusvideos/{{ Auth::user()->id }}" class="nav-link pr-2">Meus Vídeos</a>
                     </li>
                     <li class="nav-item">
-                            <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
+                        <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
                     </li>
                 </ul>
-                <ul class="navbar-nav flex-row ml-auto">
-                    <li class="nav-item">
+                @endguest
+        </div>    
+        <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
+        height=30px width=30px></a>
+        <h3><a class="title" href="/">videomate</a></h3>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        @guest
+        <ul class="navbar-nav flex-row ml-auto">
+                <li class="nav-item">
                     <a href="{{'/perfil'}}" class="nav-link pr-4">
-                            Olá {{ Auth::user()->name }}
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('logout') }}" class="nav-link"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                            {{ __('Sair') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </li>
-                </ul>
+                        Olá Visitante, bem vindo!
+                    </a>
+                </li>
+        @else
+        <ul class="navbar-nav flex-row ml-auto">
+            <li class="nav-item">
+                <a href="{{'/perfil'}}" class="nav-link pr-4">
+                    Olá {{ Auth::user()->name }}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('logout') }}" class="nav-link"
+                onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                {{ __('Sair') }}
+                            </a>
+                            
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+                        </ul>
                         
+        @endguest
+        </button>
         <div class="modal fade" id="modalUploadVideoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -136,30 +147,31 @@
                         </form>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
-                        <small>Atenção: o vídeo deve ter no máximo 2 minutos.</small>
+                        <small>Atenção: o vídeo deve ter no máximo 3 minutos.</small>
                     </div>
                 </div>
             </div>
         </div>
  
-
-            @endguest
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
-                <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Buscar</button>
-            </form>
-            <label class="switch">
-                <input type="checkbox" onclick="alternarFundo();" id="checkbox">
-                <span class="slider round"></span>
-            </label>
-        </div>
-</header>
-        <section class="bottom-nav container-fluid  navbar-expand-md navbar-dark bg-dark header2">
-            <li class="row">
-                <ul class="col-3">exenplo1</ul>
-                <ul class="col-3">exenplo2</ul>
-                <ul class="col-3">exenplo3</ul>
-                <ul class="col-3">exenplo4</ul>
+    </header>
+    <section class="nav container-fluid  navbar-expand-md navbar-dark bg-dark header2">
+        <li class="row">
+                <ul class="col-2">exemplo1</ul>
+                <ul class="col-2">exemplo2</ul>
+                <ul class="col-2">exemplo3</ul>
+                <ul class="col-4">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
+                        <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Buscar</button>
+                    </form>
+                </ul>
+                <ul class="col-2">                    
+                    <label class="switch">
+                        <input type="checkbox" onclick="alternarFundo();" id="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </ul>    
+                </ul>
             </li>
         </section>
 

@@ -265,9 +265,9 @@
   
 /* Css perfil */
 .card {
-  padding-top: 20px;
-  margin: 10px 0 20px 0;
-  background-color: rgba(214, 224, 226, 0.2);
+  top: 20px;
+  /* margin: 10px 0 20px 0; */
+  background-color: rgba(14, 38, 43, 0.2);
   border-top-width: 0;
   border-bottom-width: 2px;
   -webkit-border-radius: 3px;
@@ -314,7 +314,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 16px;
-  color: #262626;
+  /* color: #262626; */
 }
 
 .card .card-heading.image .card-heading-header span {
