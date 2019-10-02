@@ -28,7 +28,7 @@ function carregarPagina() {
       document.body.style.background = "#313131"
   
       for (i = 0; i < x.length; i++) {
-        x[i].style.color = "white"
+        x[i].style.color = "black"
       }
   
       luz = "on"

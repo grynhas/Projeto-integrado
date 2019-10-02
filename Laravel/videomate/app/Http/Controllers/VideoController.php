@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Video;
+use SebastianBergmann\Environment\Console;
 
 class VideoController extends Controller
 {
@@ -19,9 +20,9 @@ class VideoController extends Controller
         return view('/video/upload',compact('videos'));
     }
 
-     public function salvandoVideo(Request $request )
-    { 
-        //dd($request->input('id_usuario'));
+     public function salvandoVideo(Request $request ) { 
+       
+        
         $request->validate([
             'id_youtube' => 'required|string|max:1000',
             'titulo' => 'required|string|max:50',
@@ -34,6 +35,7 @@ class VideoController extends Controller
             'fim_minuto' => 'required|integer',
             'fim_segundo' => 'required|integer'
         ]);
+        
         $video = Video::create([
             "id_usuario" => $request->input('id_usuario'),
             "id_youtube" => $request->input('id_youtube'),

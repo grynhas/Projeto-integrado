@@ -94,7 +94,7 @@
                             {{ method_field('POST') }}
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
-                                <input type="text" id="id_youtube" class="form-control validate">
+                                <input type="text" id="id_youtube" name="id_youtube" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="id_youtube">Link do vídeo</label>
                                 <input type="hidden" value={{Auth::user()->id}} name="id_usuario">  
                             </div>
@@ -133,7 +133,7 @@
                                 <label data-error="wrong" data-success="right" for="tgs">Tags</label>
                             </div>
 
-                            <button type="submit" class="btn btn-unique"> Enviar<i class="fas fa-paper-plane-o ml-1"></i></button>
+                            <button type="submit" class="btn btn-unique"> {{_('Enviar')}}<i class="fas fa-paper-plane-o ml-1"></i></button>
                         </form>
                        
                     </div>

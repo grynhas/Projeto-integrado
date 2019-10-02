@@ -49,6 +49,9 @@
     font-size: 1em;
     text-decoration: none;
   }
+  .carousel{
+    margin: 10px 0;
+  }
 
   span .slider.round {
     background-color: rgb(255, 162, 0);
@@ -104,6 +107,7 @@
     width: 100%;
     max-width: 250px;
     padding: 10px;
+    margin: 0 0 12px 12px;
     /* width: 200px; */
   }
   
@@ -112,7 +116,7 @@
   }
   
   .video p {
-    color: white;
+    color: black;
   }
   
   .thumbnail {

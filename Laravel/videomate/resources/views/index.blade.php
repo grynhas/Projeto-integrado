@@ -51,7 +51,7 @@
 </div>
             <div class="row">
                 @foreach ($videos as $video)
-                <div class="col-m video">
+                <div class="col-m video jumbotron" align="center">
                     <div class="thumbnail">
                         <img src="https://img.youtube.com/vi/{{ $video->id_youtube }}/hqdefault.jpg" alt="">
                         <div class="overlay">

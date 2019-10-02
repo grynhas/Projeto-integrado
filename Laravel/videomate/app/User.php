@@ -20,7 +20,7 @@ class User extends Authenticatable
     ];
 
     public function video() {
-        return $this->hasMany(videos::class, 'id_usuario', 'id');
+        return $this->hasMany(Videos::class, 'id_usuario', 'id');
     }
 
     /**
