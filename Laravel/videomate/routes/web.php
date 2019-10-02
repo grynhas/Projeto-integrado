@@ -29,7 +29,7 @@ Route::get('/video/meusvideos/{id}','VideoController@listandoMeusVideos');
 Route::get('/video/busca', 'VideoController@buscandoVideos');
 
 // Reproduzir de Vídeo
-Route::post('video/reproduzir/{id}','VideoController@reproduzir');
+Route::get('video/reproduzir/{id}','VideoController@reproduzir');
 
 // Login Usuario
 Route::post('/usuario/login', 'UserController@logandoUsuario');
