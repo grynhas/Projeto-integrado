@@ -29,7 +29,7 @@
 
 <body onload="carregarPagina()">
     <header class="navbar navbar-expand-md navbar-dark bg-dark" height=10vh width=100vw>
-            <a href="/" class="navbar-brand"><img src="../images/Logo-Videomate.png" alt="Logo Videomate"
+            <a href="/" class="navbar-brand"><img src="../../images/Logo-Videomate.png" alt="Logo Videomate"
                 height=30px width=30px></a>
                 <h3><a class="title" href="/">videomate</a></h3>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -94,9 +94,9 @@
                             {{ method_field('POST') }}
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
+                                <input type="hidden" value={{Auth::user()->id}} name="id_usuario">  
                                 <input type="text" id="id_youtube" name="id_youtube" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="id_youtube">Link do vídeo</label>
-                                <input type="hidden" value={{Auth::user()->id}} name="id_usuario">  
                             </div>
 
                             <div class="md-form mb-5">
