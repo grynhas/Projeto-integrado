@@ -17,9 +17,9 @@ Route::get('/index', 'VideoController@listandoVideos');
 
 //perfil
 Route::get('/perfil', 'UserController@exibirPerfil');
+
 // Cadastrar Video
 Route::get('/video/upload','VideoController@cadastroDeVideos');
-
 Route::post('/video/upload','VideoController@salvandoVideo');
 
 //Meus videos (atualização 22.09.19)
@@ -37,6 +37,9 @@ Route::post('/usuario/login', 'UserController@logandoUsuario');
 //Cadastrar Usuario
 Route::post('/usuario/cadastro','UserController@cadastrandoUsuario');
 
+
+//deletar video
+Route::delete('/video/meusvideos/{id}', 'VideoController@removendoVideo');
 
 Auth::routes();
 

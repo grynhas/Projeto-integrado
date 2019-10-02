@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container">
+<div class="ajusteFooter container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card navbar-dark bg-dark">
-                <div class="card-header">{{ __('Cadastro') }}</div>
+            <div class="card">
+                <div class="card-cadastro card-header">{{ __('Registro') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="nickname" class="col-md-4 col-form-label text-md-right">{{ __('nickname') }}</label>
+                            <label for="nickname" class="col-md-4 col-form-label text-md-right">{{ __('Nickname') }}</label>
 
                             <div class="col-md-6">
                                 <input id="nickname" type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname') }}" required autocomplete="nickname" autofocus>
@@ -77,7 +77,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn btn-warning">
-                                    {{ __('Registrar') }}
+                                    {{ __('Registrar') }} 
                                 </button>
                                 <button type="submit" class="btn btn-danger">
                                     {{ __('Cancelar') }}

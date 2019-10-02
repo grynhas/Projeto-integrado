@@ -50,25 +50,25 @@
                                 <!-- Modal -->
                                 <div class="modal fade" id="modal{{$video->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h5 class="modal-title">Deseja realmente excluir ?</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                                        <div class="modal-content bg-dark">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title">Deseja realmente excluir ?</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Video: {{ $video->id_usuario }}</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                            <form action="/video/remover/{{$video->id}}" method="POST">
+                                                @csrf
+                                                {{ method_field('DELETE') }}
+                                                <button type="submit" class="btn btn-danger">Excluir</button>
+                                            </form>
+                                            </div>
                                         </div>
-                                        <div class="modal-body">
-                                            <p>Filme: {{ $video->titulo }}</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                        <form action="/video/remover/{{$video->id}}" method="POST">
-                                            @csrf
-                                            {{ method_field('DELETE') }}
-                                            <button type="submit" class="btn btn-danger">Excluir</button>
-                                        </form>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </td>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>videomate</title>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -37,7 +38,7 @@
                     <li class="nav-item">
                         <a href="/register" class="nav-link pr-2">Cadastro</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item center">
                         <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
                     </li>        
                 </ul>
@@ -47,8 +48,8 @@
                     <li class="nav-item">
                         <a href="/video/meusvideos/{{ Auth::user()->id }}" class="nav-link pr-2">Meus Vídeos</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
+                    <li class="nav-item center">
+                            <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
                     </li>
                 </ul>
                 @endguest
@@ -101,50 +102,51 @@
                     <div class="modal-body mx-3">
                         <form method="POST" action="/video/upload">
                             @csrf
-                            @method('POST')
+                            {{ method_field('POST') }}
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
-                                <input type="text" id="id_youtube" class="form-control validate">
+                                <input type="text" id="id_youtube" name="id_youtube" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="id_youtube">Link do vídeo</label>
-                                <input type="hidden" value="Auth::user()->id" name="id_usuario">  
+                                <input type="hidden" value={{Auth::user()->id}} name="id_usuario">  
                             </div>
 
                             <div class="md-form mb-5">
                                 <i class="fas fa-user prefix grey-text"></i>
-                                <input type="titulo" id="titulo" class="form-control validate">
+                                <input type="titulo" id="titulo" name="titulo" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="titulo">Titulo</label>
                             </div>
 
                             <div class="md-form mb-5">
                                 <i class="fas fa-hourglass-half"></i>
-                                <input class="col-2" type="number" id="inicio_hora" class="form-control validate">
-                                <input class="col-2" type="number" id="inicio_minuto" class="form-control validate">
-                                <input class="col-2"type="number" id="inicio_segundo" class="form-control validate">
+                                <input class="col-2" type="number" id="inicio_hora" name="inicio_hora"class="form-control validate">
+                                <input class="col-2" type="number" id="inicio_minuto" name="inicio_minuto" class="form-control validate">
+                                <input class="col-2"type="number" id="inicio_segundo" name="inicio_segundo" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="minutoinicial">HH:MM:SS</label>
                             </div>
 
                             <div class="md-form mb-5">
                                     <i class="fas fa-hourglass-half"></i>
-                                    <input class="col-2" type="number" id="fim_hora" class="form-control validate">
-                                    <input class="col-2" type="number" id="fim_minuto" class="form-control validate">
-                                    <input class="col-2"type="number" id="fim_segundo" class="form-control validate">
+                                    <input class="col-2" type="number" id="fim_hora" name="fim_hora" class="form-control validate">
+                                    <input class="col-2" type="number" id="fim_minuto" name="fim_minuto" class="form-control validate">
+                                    <input class="col-2"type="number" id="fim_segundo" name="fim_segundo" class="form-control validate">
                                     <label data-error="wrong" data-success="right" for="minutoinicial">HH:MM:SS</label>
                             </div>
 
                             <div class="md-form">
                                 <i class="fas fa-pencil prefix grey-text"></i>
-                                <textarea type="text" id="descricao" class="md-textarea form-control" rows="4"></textarea>
+                                <textarea type="text" id="descricao" name="descricao" class="md-textarea form-control" rows="4"></textarea>
                                 <label data-error="wrong" data-success="right" for="descricao">Descrição</label>
                             </div>
 
                             <div class="md-form">
                                 <i class="fas fa-pencil prefix grey-text"></i>
-                                <textarea type="text" id="tags" class="md-textarea form-control" rows="4"></textarea>
+                                <textarea type="text" id="tags"  name="tags" class="md-textarea form-control" rows="4"></textarea>
                                 <label data-error="wrong" data-success="right" for="tgs">Tags</label>
                             </div>
 
-                            <button type="submit" class="btn btn-unique">{{ __('Enviar') }}<i class="fas fa-paper-plane-o ml-1"></i></button>
+                            <button type="submit" class="btn btn-unique"> {{_('Enviar')}}<i class="fas fa-paper-plane-o ml-1"></i></button>
                         </form>
+                       
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
                         <small>Atenção: o vídeo deve ter no máximo 3 minutos.</small>
@@ -153,31 +155,31 @@
             </div>
         </div>
  
-    </header>
-    <section class="nav container-fluid  navbar-expand-md navbar-dark bg-dark header2">
-        <li class="row">
-                <ul class="col-2">exemplo1</ul>
-                <ul class="col-2">exemplo2</ul>
-                <ul class="col-2">exemplo3</ul>
-                <ul class="col-4">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
-                        <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Buscar</button>
-                    </form>
-                </ul>
-                <ul class="col-2">                    
-                    <label class="switch">
-                        <input type="checkbox" onclick="alternarFundo();" id="checkbox">
-                        <span class="slider round"></span>
-                    </label>
-                </ul>    
-                </ul>
+
+        @endguest
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
+                <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Buscar</button>
+            </form>
+            <label class="switch">
+                <input type="checkbox" onclick="alternarFundo();" id="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+</header>
+        <section class="botoes bottom-nav container-fluid  navbar-expand-md navbar-dark bg-dark header2">
+            <li class="row">
+                <ul class="col-3">#primeira</ul>
+                <ul class="col-3">#segunda</ul>
+                <ul class="col-3">#terceira</ul>
+                <ul class="col-3">#quarta</ul>
+
             </li>
         </section>
 
 
     <main>
-        <div class="container">
+        <div class="logado container">
             <div class="row">
                 {{-- 
                 <section id="menu" class="col-2 col-md-2">
@@ -200,7 +202,7 @@
     </main>
 
 
-    <div class=" social footer-title d-flex justify-content-center col-12 page-footer font-small bg-dark pt-3 mt-3 rounded">
+    <div class=" footer social footer-title d-flex justify-content-center col-12 page-footer font-small bg-dark pt-3 mt-3 rounded">
     <div class="footer-title">
             <h4>Nossas Redes</h4>
     </div> 
