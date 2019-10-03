@@ -114,20 +114,20 @@
                             @csrf
                             {{ method_field('POST') }}
                             <div class="md-form mb-5">
-                                <i class="fas fa-user prefix grey-text"></i>
+                                <i class="fab fa-youtube"></i>
                                 <input type="hidden" value={{Auth::user()->id}} name="id_usuario">  
                                 <input type="text" id="id_youtube" name="id_youtube" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="id_youtube">Link do vídeo</label>
                             </div>
 
                             <div class="md-form mb-5">
-                                <i class="fas fa-user prefix grey-text"></i>
+                                <i class="fas fa-heading"></i>
                                 <input type="titulo" id="titulo" name="titulo" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="titulo">Titulo</label>
                             </div>
 
                             <div class="md-form mb-5">
-                                <i class="fas fa-hourglass-half"></i>
+                                <i class="fas fa-hourglass-start"></i>
                                 <input class="col-2" type="number" id="inicio_hora" name="inicio_hora"class="form-control validate">
                                 <input class="col-2" type="number" id="inicio_minuto" name="inicio_minuto" class="form-control validate">
                                 <input class="col-2"type="number" id="inicio_segundo" name="inicio_segundo" class="form-control validate">
@@ -135,7 +135,7 @@
                             </div>
 
                             <div class="md-form mb-5">
-                                    <i class="fas fa-hourglass-half"></i>
+                                    <i class="fas fa-hourglass-end"></i>
                                     <input class="col-2" type="number" id="fim_hora" name="fim_hora" class="form-control validate">
                                     <input class="col-2" type="number" id="fim_minuto" name="fim_minuto" class="form-control validate">
                                     <input class="col-2"type="number" id="fim_segundo" name="fim_segundo" class="form-control validate">
@@ -143,18 +143,18 @@
                             </div>
 
                             <div class="md-form">
-                                <i class="fas fa-pencil prefix grey-text"></i>
+                                <i class="fas fa-keyboard"></i>
                                 <textarea type="text" id="descricao" name="descricao" class="md-textarea form-control" rows="4"></textarea>
                                 <label data-error="wrong" data-success="right" for="descricao">Descrição</label>
                             </div>
 
                             <div class="md-form">
-                                <i class="fas fa-pencil prefix grey-text"></i>
+                                <i class="fas fa-hashtag"></i>
                                 <textarea type="text" id="tags"  name="tags" class="md-textarea form-control" rows="4"></textarea>
                                 <label data-error="wrong" data-success="right" for="tgs">Tags</label>
                             </div>
 
-                            <button type="submit" class="btn btn-unique"> {{_('Enviar')}}<i class="fas fa-paper-plane-o ml-1"></i></button>
+                            <button type="submit" class="btn btn-unique"> {{_('Enviar')}}</button>
                         </form>
                        
                     </div>

@@ -50,17 +50,17 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content bg-dark">
                                             <div class="modal-header">
-                                            <h5 class="modal-title">Deseja realmente excluir ?</h5>
+                                            <h5 class="modal-title">Deseja realmente excluir {{ $video->titulo }}?</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Video: {{ $video->id_usuario }}</p>
+                                                <p>Video: {{ $video->titulo }}</p>
                                             </div>
                                             <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                            <form action="/video/remover/{{$video->id}}" method="POST">
+                                            <form action="/video/meusvideos/{{$video->id}}" method="POST">
                                                 @csrf
                                                 {{ method_field('DELETE') }}
                                                 <button type="submit" class="btn btn-danger">Excluir</button>

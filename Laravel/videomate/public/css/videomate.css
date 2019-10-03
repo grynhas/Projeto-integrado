@@ -114,6 +114,11 @@
   .video strong {
     color: rgb(255, 162, 0);
   }
+  .comentarios{
+    color: rgb(255, 162, 0);
+    font-size: medium;
+  
+  }
   
   .video p {
     color: black;
