@@ -67,7 +67,7 @@ class VideoController extends Controller
     }
 
 
-    public function buscandoVideos($tag, $tutilo)
+    public function buscandoVideos($tag, $titulo)
     {
         $video = Video::find($tag, $tutilo);
 

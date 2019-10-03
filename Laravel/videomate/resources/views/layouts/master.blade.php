@@ -47,9 +47,30 @@
                     </li>
                     <li class="nav-item center">
                         <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
-                    </li>        
+                    </li> 
+                    <div class="modal fade" id="modalUploadVideoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header text-center">
+                                    <h4 class="modal-title w-100 font-weight-bold">Cadastre-se para adicionar vídeos</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>    
+                                <form method="GET" action="/register">    
+                                    <button type="submit" class="btn btn-unique"> {{_('Cadastrar')}}<i class="fas fa-paper-plane-o ml-1"></i></button>
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
                 </ul>
-                
+                    <ul class="navbar-nav flex-row ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link pr-4">
+                                Olá, Visitante!
+                            </a>
+                        </li>                                 
+                    </ul>    
             @else
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
@@ -146,7 +167,7 @@
  
 
         @endguest
-            <form class="form-inline my-2 my-lg-0">
+        <form method="GET" action="/video/busca/" class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
                 <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Buscar</button>
             </form>
