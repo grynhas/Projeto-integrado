@@ -56,9 +56,9 @@ class VideoController extends Controller
         return redirect('/index');
         
     } 
-    public function alterandoFilme(Request $request, $id) { 
+    public function alterandoVideo(Request $request, $id) { 
         $video = Video::find($id);
-        
+
         $request->validate([
             'id_youtube' => 'required|string|max:1000',
             'titulo' => 'required|string|max:50',
@@ -70,22 +70,19 @@ class VideoController extends Controller
             'fim_hora' => 'required|integer',
             'fim_minuto' => 'required|integer',
             'fim_segundo' => 'required|integer'
+            
         ]);
-        
-        $video = Video::create([
-            "id_usuario" => $request->input('id_usuario'),
-            "id_youtube" => $request->input('id_youtube'),
-            "titulo" => $request->input('titulo'),
-            "descricao" => $request->input('descricao'),
-            "tags" => $request->input('tags'),
-            "inicio_hora" => $request->input('inicio_hora'),
-            "inicio_minuto" => $request->input('inicio_minuto'),
-            "inicio_segundo" => $request->input('inicio_segundo'),
-            "fim_hora" => $request->input('fim_hora'),
-            "fim_minuto" => $request->input('fim_minuto'),
-            "fim_segundo" => $request->input('fim_segundo')
-
-        ]);
+            $video->id_usuario = $request->input('id_usuario');
+            $video->id_youtube = $request->input('id_youtube');
+            $video->titulo = $request->input('titulo');
+            $video->descricao = $request->input('descricao');
+            $video->tags = $request->input('tags');
+            $video->inicio_hora = $request->input('inicio_hora');
+            $video->inicio_minuto = $request->input('inicio_minuto');
+            $video->inicio_segundo = $request->input('inicio_segundo');
+            $video->fim_hora = $request->input('fim_hora');
+            $video->fim_minuto = $request->input('fim_minuto');
+            $video->fim_segundo = $request->input('fim_segundo');
 
         $video->save();
 
