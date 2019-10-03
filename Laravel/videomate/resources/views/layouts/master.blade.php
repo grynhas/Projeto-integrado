@@ -53,7 +53,7 @@
             @else
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a href="/video/meusvideos/{{ Auth::user()->id }}" class="nav-link pr-2">Meus Vídeos</a>
+                        <a href="/video/meusvideos/{{ Auth::user()->id }}" value={{Auth::user()->id}} name="LogadoNoMomento" class="nav-link pr-2">Meus Vídeos</a>
                     </li>
                     <li class="nav-item center">
                             <a href="#" class="fas fa-upload" data-toggle="modal" data-target="#modalUploadVideoForm"></a>
@@ -168,7 +168,7 @@
 
 
     <main>
-        <div class="logado container">
+        <div class="logado container " align-items="center">
             <div class="row">
                 {{-- 
                 <section id="menu" class="col-2 col-md-2">

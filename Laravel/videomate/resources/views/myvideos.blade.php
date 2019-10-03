@@ -1,7 +1,5 @@
 @extends('layouts.master')
 
-@section('title', 'Meus Vídeos')
-
 @section('content')
     @if (is_null($videos))
         <section class="row">
