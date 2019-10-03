@@ -6,12 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-    protected $table = "tags_videos";
+    protected $table = "tags";
     protected $primaryKey = "id";
     protected $fillable = ["tag"];
-
-    public function video()
-    {
-        return $this->hasMany(videos::class, 'id', 'id_video');
-    }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTagsVideosTable extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateTagsVideosTable extends Migration
      */
     public function up()
     {
-        Schema::create('tags_videos', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('tag');
-            $table->unsignedBigInteger('id_video');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateTagsVideosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tags_videos');
+        Schema::dropIfExists('tags');
     }
 }
