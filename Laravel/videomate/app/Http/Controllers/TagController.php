@@ -8,8 +8,9 @@ use App\Tag;
 
 class TagController extends Controller
 {
-    public function buscandoTags(Request $request){
-        $videos = Video::where('tags', '=', $request->input("tag"))->get();
+    public function buscandoTags($tag){
+
+        $videos = Video::where('tags', '=', $tag)->get();
 
         return view('buscaTag')->with('videos', $videos);
     }

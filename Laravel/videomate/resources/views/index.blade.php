@@ -5,7 +5,9 @@
 <section class="botoes bottom-nav container-fluid navbar-expand-md navbar-dark bg-dark header2">
         <li class="row">
             @foreach ($tags as $tag)
-            <a method="GET" href="/tag/busca/" class="link col-2">#{{ $tag->tag }}</a>
+            <a
+                href="/tag/busca/{{ $tag->tag }}" class="link col-2" name="tag" id="tag"> #{{ $tag->tag }} 
+            </a>
             @endforeach
         </li>
 </section>
