@@ -26,7 +26,7 @@ Route::post('/video/upload','VideoController@salvandoVideo');
 Route::get('/video/meusvideos/{id}','VideoController@listandoMeusVideos');
 
 // Buscar vídeo
-Route::get('/video/busca/{input}', 'VideoController@buscandoVideos');
+Route::get('/video/busca/', 'VideoController@buscandoVideos');
 
 // Alterar video
 Route::get('/videos/alterar/{id}', 'VideoController@alterandoVideo');

@@ -99,11 +99,14 @@ class VideoController extends Controller
     }
 
 
-    public function buscandoVideos($tag, $titulo)
+    public function buscandoVideos(Request $request)
     {
-        $video = Video::find($tag, $tutilo);
+        // echo $request->input("titulo");
+        // exit;
 
-        exit;
+        $videos = Video::where('titulo', '=', $request->input("titulo"))->get();
+
+        return view('busca')->with('videos', $videos);
     }
 
     public function reproduzir($id)

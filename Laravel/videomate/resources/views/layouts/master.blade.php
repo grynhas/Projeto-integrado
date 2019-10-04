@@ -83,7 +83,7 @@
                 <ul class="navbar-nav flex-row ml-auto">
                     <li class="nav-item">
                     <a href="{{'/perfil'}}" class="nav-link pr-4">
-                            Olá {{ Auth::user()->name }}
+                            Olá {{ Auth::user()->nickname }}
                         </a>
                     </li>
                     <li class="nav-item">
@@ -168,9 +168,20 @@
 
         @endguest
         <form method="GET" action="/video/busca/" class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="pesquisa">
+                <input class="form-control mr-sm-2" type="search" placeholder="pesquisa" name="titulo" id="titulo">
                 <button class="btn btn-outline-success my-2 my-sm-0 botaoHeader" type="submit">Buscar</button>
             </form>
+
+        @if(count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
             <label class="switch">
                 <input type="checkbox" onclick="alternarFundo();" id="checkbox">
                 <span class="slider round"></span>
