@@ -27,6 +27,7 @@ Route::get('/video/meusvideos/{id}','VideoController@listandoMeusVideos');
 
 // Buscar vídeo
 Route::get('/video/busca/', 'VideoController@buscandoVideos');
+Route::get('/tag/busca/', 'TagController@buscandoTags');
 
 // Alterar video
 Route::get('/videos/alterar/{id}', 'VideoController@alterandoVideo');

@@ -2,6 +2,14 @@
 
 @section('content')
 
+<section class="botoes bottom-nav container-fluid navbar-expand-md navbar-dark bg-dark header2">
+        <li class="row">
+            @foreach ($tags as $tag)
+            <a method="GET" href="/tag/busca/" class="link col-2">#{{ $tag->tag }}</a>
+            @endforeach
+        </li>
+</section>
+
 <div id="galeria" class="col-12 justify-content-center">
     <section id="carousel-controles" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">

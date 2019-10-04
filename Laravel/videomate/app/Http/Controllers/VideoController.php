@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Video;
+use App\Tag;
 use SebastianBergmann\Environment\Console;
 use Symfony\Component\Console\Input\Input;
 
@@ -12,7 +13,8 @@ class VideoController extends Controller
     public function listandoVideos()
     {
         $videos = Video::all();
-        return view('index')->with('videos', $videos);
+        $tags = Tag::all();
+        return view('index')->with(["videos"=>$videos, "tags"=>$tags]);
     }
 
     public function cadastroDeVideos(){

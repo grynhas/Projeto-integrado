@@ -187,17 +187,14 @@
                 <span class="slider round"></span>
             </label>
         </div>
-</header>
-        <section class="botoes bottom-nav container-fluid  navbar-expand-md navbar-dark bg-dark header2">
-            <li class="row">
-                <ul class="col-3">#primeira</ul>
-                <ul class="col-3">#segunda</ul>
-                <ul class="col-3">#terceira</ul>
-                <ul class="col-3">#quarta</ul>
-
-            </li>
-        </section>
-
+</header>        
+        {{-- <section class="botoes bottom-nav container-fluid navbar-expand-md navbar-dark bg-dark header2">
+                <li class="row">
+                    @foreach ($tags as $tag)
+                    <ul class="col-2">#{{ $tag->tag }}</ul>
+                    @endforeach
+                </li>
+        </section> --}}
 
     <main>
         <div class="logado container " align-items="center">
