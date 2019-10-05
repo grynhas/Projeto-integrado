@@ -26,28 +26,22 @@
                     <div class="carousel-item active">
                         <img src="../images/imagem5.jpeg" class="img-fluid" alt="">
                         <div class="carousel-caption">
-                            <h3>Como funciona</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet repellendus, necessitatibus,
-                                debitis sint quae ratione, officiis quas eos est aperiam excepturi quia porro unde
-                                repudiandae. Corrupti ipsum nemo repellendus aspernatur.</p>
+                            <h3></h3>
+                            <h2>Auxiliar nos estudos...</h2>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="../images/imagem4.jpeg" class="img-fluid" alt="">
+                        <img src="../images/imagem5.jpeg" class="img-fluid" alt="">
                         <div class="carousel-caption">
-                            <h3>Como funciona</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam accusamus sed ad adipisci
-                                maxime autem delectus libero, qui iure quo nemo consectetur obcaecati distinctio sint
-                                voluptatem voluptas quod commodi optio.</p>
+                            <h3></h3>
+                            <h2>Cadastre Videos do Youtube.</h2>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="../images/imagem3.jpeg" class="img-fluid" alt="">
+                        <img src="../images/imagem5.jpeg" class="img-fluid" alt="">
                         <div class="carousel-caption">
-                            <h3>Como funciona</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic vel sequi explicabo recusandae
-                                nulla laudantium labore autem deserunt necessitatibus illo nobis optio, voluptatibus
-                                reprehenderit consectetur unde adipisci ipsa error fuga?</p>
+                            <h3></h3>
+                            <h2>Compartilhe Conhecimento.</h2>
                         </div>
                     </div>
                 </div>
